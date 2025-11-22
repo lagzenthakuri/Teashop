@@ -28,6 +28,12 @@
         .star-rating {
             color: #fbbf24;
         }
+        
+        .size-option:checked + label {
+            background-color: #dc2626;
+            color: white;
+            border-color: #dc2626;
+        }
     </style>
 </head>
 
@@ -77,7 +83,7 @@
         <!-- Right Buttons -->
         <div class="flex space-x-3">
             <button class="hover:text-red-600 transition">Join Us</button>
-            <button class="bg-red-600 border border-red-700 p-2 text-white rounded-lg hover:bg-red-700 transition">Order Now</button>
+            <button class="bg-red-600 border border-red-700 p-2 text-white rounded-lg hover:bg-red-700 transition order-now-btn">Order Now</button>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -113,6 +119,64 @@
             </select>
     </div>
 </header>
+
+<!-- Cart Popup -->
+<div class="fixed inset-0 z-50 flex justify-end opacity-0 invisible transition-opacity duration-300" id="cartPopup">
+    <div class="fixed inset-0 bg-black bg-opacity-50" id="cartBackdrop"></div>
+    <div class="relative bg-white h-full w-full max-w-md transform transition-transform duration-300 translate-x-full overflow-y-auto">
+        <div class="sticky top-0 bg-white p-6 border-b border-gray-200 flex justify-between items-center z-10">
+            <h2 class="text-xl heading-font font-bold text-gray-900">Your Cart</h2>
+            <button class="text-2xl text-gray-500 hover:text-gray-700" id="closeCart">&times;</button>
+        </div>
+        <div class="p-6">
+            <div class="flex mb-6 pb-6 border-b border-gray-100">
+                <img src="./assets/products/5.png" alt="Jasmine Dragon Pearls" class="w-20 h-20 object-cover rounded-lg mr-4">
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-900">Jasmine Dragon Pearls</h3>
+                    <p class="text-gray-600 text-sm cart-size">Size: 50g (Tin)</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-red-700 font-bold">€9,45</span>
+                        <div class="flex items-center">
+                            <button class="w-8 h-8 rounded-full border border-red-600 bg-white text-red-600 flex items-center justify-center decrease-btn">-</button>
+                            <input type="text" class="w-10 text-center mx-2 border border-gray-300 rounded cart-quantity" value="1" readonly>
+                            <button class="w-8 h-8 rounded-full border border-red-600 bg-white text-red-600 flex items-center justify-center increase-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="font-bold text-gray-900 mb-3">Select Size</h3>
+                <div class="grid grid-cols-2 gap-2">
+                    <input type="radio" name="cartSize" id="cartSize50g" class="hidden size-option" checked>
+                    <label for="cartSize50g" class="border border-red-300 py-2 rounded-md text-sm text-center cursor-pointer hover:bg-red-50 transition-colors">50g (Tin)</label>
+                    
+                    <input type="radio" name="cartSize" id="cartSize100g" class="hidden size-option">
+                    <label for="cartSize100g" class="border border-red-300 py-2 rounded-md text-sm text-center cursor-pointer hover:bg-red-50 transition-colors">100g (Bag)</label>
+                    
+                    <input type="radio" name="cartSize" id="cartSize196g" class="hidden size-option">
+                    <label for="cartSize196g" class="border border-red-300 py-2 rounded-md text-sm text-center cursor-pointer hover:bg-red-50 transition-colors">196g (TH)</label>
+                    
+                    <input type="radio" name="cartSize" id="cartSize250g" class="hidden size-option">
+                    <label for="cartSize250g" class="border border-red-300 py-2 rounded-md text-sm text-center cursor-pointer hover:bg-red-50 transition-colors">250g (Bag)</label>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="font-bold text-gray-900 mb-2">Estimated total</h3>
+                <div class="flex justify-between items-center">
+                    <span class="text-lg font-bold cart-total">€9,45 EUR</span>
+                    <span class="text-sm text-gray-600">Taxes included</span>
+                </div>
+                <p class="text-sm text-gray-600 mt-1">Discounts and shipping calculated at checkout.</p>
+            </div>
+        </div>
+        <div class="sticky bottom-0 bg-white p-6 border-t border-gray-200">
+            <button id="checkoutBtn" class="w-full bg-red-700 text-white py-3 rounded-lg font-medium hover:bg-red-800 transition-colors">Check out</button>
+            <button class="w-full border border-red-700 text-red-700 py-3 rounded-lg font-medium hover:bg-red-50 transition-colors mt-3" id="continueShoppingBtn">Continue Shopping</button>
+        </div>
+    </div>
+</div>
 
 <script>
 function toggleMenu() {
@@ -188,28 +252,48 @@ function toggleMenu() {
                 <p class="text-gray-600">Tax Included - Shipping calculated at checkout.</p>
             </div>
 
+            <!-- Size Selector -->
+            <div class="mb-6">
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Select Size</h3>
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                    <input type="radio" name="size" id="size50g" class="hidden size-option" checked>
+                    <label for="size50g" class="border border-red-300 py-3 rounded-md text-center cursor-pointer hover:bg-red-50 transition-colors">
+                        <div class="font-medium">50g (Tin)</div>
+                        <div class="text-sm text-gray-600">€9,45</div>
+                    </label>
+                    
+                    <input type="radio" name="size" id="size100g" class="hidden size-option">
+                    <label for="size100g" class="border border-red-300 py-3 rounded-md text-center cursor-pointer hover:bg-red-50 transition-colors">
+                        <div class="font-medium">100g (Bag)</div>
+                        <div class="text-sm text-gray-600">€16,90</div>
+                    </label>
+                    
+                    <input type="radio" name="size" id="size196g" class="hidden size-option">
+                    <label for="size196g" class="border border-red-300 py-3 rounded-md text-center cursor-pointer hover:bg-red-50 transition-colors">
+                        <div class="font-medium">196g (TH)</div>
+                        <div class="text-sm text-gray-600">€29,95</div>
+                    </label>
+                    
+                    <input type="radio" name="size" id="size250g" class="hidden size-option">
+                    <label for="size250g" class="border border-red-300 py-3 rounded-md text-center cursor-pointer hover:bg-red-50 transition-colors">
+                        <div class="font-medium">250g (Bag)</div>
+                        <div class="text-sm text-gray-600">€35,80</div>
+                    </label>
+                </div>
+            </div>
+
             <!-- Quantity Selector -->
             <div class="mb-6">
                 <h3 class="text-lg font-bold text-gray-900 mb-3">Quantity</h3>
-                <div class="flex space-x-4">
-                    <select class="border border-gray-300 px-4 py-2 rounded-lg text-gray-700">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <select class="border border-gray-300 px-4 py-2 rounded-lg text-gray-700">
-                        <option>50g (Tin)</option>
-                        <option>100g (Bag)</option>
-                        <option>196g (TH)</option>
-                        <option>250g (Bag)</option>
-                    </select>
+                <div class="flex items-center">
+                    <button class="w-12 h-12 rounded-lg border border-red-600 bg-white text-red-600 flex items-center justify-center text-xl decrease-btn">-</button>
+                    <input type="text" class="w-16 text-center mx-4 border border-gray-300 rounded-lg text-lg font-medium quantity-input" value="1" readonly>
+                    <button class="w-12 h-12 rounded-lg border border-red-600 bg-white text-red-600 flex items-center justify-center text-xl increase-btn">+</button>
                 </div>
             </div>
 
             <!-- Add to Cart Button -->
-            <button class="w-full bg-red-700 text-white py-4 rounded-lg font-bold text-lg hover:bg-red-800 transition mb-6">
+            <button class="w-full bg-red-700 text-white py-4 rounded-lg font-bold text-lg hover:bg-red-800 transition mb-6 add-to-cart-btn">
                 Add to cart
             </button>
 
@@ -360,7 +444,7 @@ function toggleMenu() {
                     <h4 class="text-lg heading-font font-bold text-gray-900 mb-2">Jasmine Tea Deluxe with Flowers</h4>
                     <div class="flex justify-between items-center">
                         <span class="text-xl heading-font font-bold text-red-700">€8,50</span>
-                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm">Add</button>
+                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm add-to-cart-btn">Add</button>
                     </div>
                 </div>
             </div>
@@ -374,7 +458,7 @@ function toggleMenu() {
                     <h4 class="text-lg heading-font font-bold text-gray-900 mb-2">White Chrysanthemum (Gong Ju)</h4>
                     <div class="flex justify-between items-center">
                         <span class="text-xl heading-font font-bold text-red-700">€10,35</span>
-                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm">Add</button>
+                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm add-to-cart-btn">Add</button>
                     </div>
                 </div>
             </div>
@@ -388,7 +472,7 @@ function toggleMenu() {
                     <h4 class="text-lg heading-font font-bold text-gray-900 mb-2">Oolong & Jasmine Tea Gift Box</h4>
                     <div class="flex justify-between items-center">
                         <span class="text-xl heading-font font-bold text-red-700">€23,50</span>
-                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm">Add</button>
+                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm add-to-cart-btn">Add</button>
                     </div>
                 </div>
             </div>
@@ -402,7 +486,7 @@ function toggleMenu() {
                     <h4 class="text-lg heading-font font-bold text-gray-900 mb-2">Leaf Shaped Tea Strainer</h4>
                     <div class="flex justify-between items-center">
                         <span class="text-xl heading-font font-bold text-red-700">€10,00</span>
-                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm">Add</button>
+                        <button class="bg-red-700 text-white px-3 py-1 rounded-lg hover:bg-red-800 transition-colors text-sm add-to-cart-btn">Add</button>
                     </div>
                 </div>
             </div>
@@ -448,7 +532,7 @@ function toggleMenu() {
                     <ul class="space-y-2">
                         <li><a href="#" class="text-red-200 hover:text-white transition-colors">Our Story</a></li>
                         <li><a href="#" class="text-red-200 hover:text-white transition-colors">Tea Collections</a></li>
-                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Brewing Guide</a></li>
+                        <li><a href="faq.html" class="text-red-200 hover:text-white transition-colors">FAQ</a></li>
                         <li><a href="#" class="text-red-200 hover:text-white transition-colors">Blog</a></li>
                     </ul>
                 </div>
@@ -467,6 +551,171 @@ function toggleMenu() {
             </div>
         </div>
     </footer>
+
+    <!-- Cart Popup JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartPopup = document.getElementById('cartPopup');
+            const cartBackdrop = document.getElementById('cartBackdrop');
+            const closeCartBtn = document.getElementById('closeCart');
+            const orderNowBtns = document.querySelectorAll('.order-now-btn');
+            const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            const continueShoppingBtn = document.getElementById('continueShoppingBtn');
+            
+            // Product data with prices for different sizes
+            const productPrices = {
+                '50g': 9.45,
+                '100g': 16.90,
+                '196g': 29.95,
+                '250g': 35.80
+            };
+            
+            // Function to open cart popup
+            function openCartPopup() {
+                cartPopup.classList.remove('invisible', 'opacity-0');
+                cartPopup.classList.add('opacity-100');
+                cartPopup.querySelector('.transform').classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
+            }
+            
+            // Function to close cart popup
+            function closeCartPopup() {
+                cartPopup.classList.add('invisible', 'opacity-0');
+                cartPopup.classList.remove('opacity-100');
+                cartPopup.querySelector('.transform').classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            }
+            
+            // Event listeners for opening cart
+            orderNowBtns.forEach(btn => {
+                btn.addEventListener('click', openCartPopup);
+            });
+            
+            // Add to cart buttons
+            addToCartBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update cart content based on selected options
+                    const quantityInput = document.querySelector('.quantity-input');
+                    const selectedSize = document.querySelector('input[name="size"]:checked');
+                    
+                    if (quantityInput && selectedSize) {
+                        const quantity = quantityInput.value;
+                        const sizeLabel = document.querySelector(`label[for="${selectedSize.id}"]`).textContent.trim();
+                        
+                        // Update cart display
+                        const cartQuantity = document.querySelector('.cart-quantity');
+                        const cartSize = document.querySelector('.cart-size');
+                        
+                        if (cartQuantity) cartQuantity.value = quantity;
+                        if (cartSize) cartSize.textContent = `Size: ${sizeLabel}`;
+                        
+                        // Update cart total
+                        const sizeKey = selectedSize.id.replace('size', '').replace('g', '') + 'g';
+                        const price = productPrices[sizeKey];
+                        const total = (price * quantity).toFixed(2);
+                        document.querySelector('.cart-total').textContent = `€${total} EUR`;
+                    }
+                    
+                    openCartPopup();
+                });
+            });
+            
+            // Event listener for closing cart
+            if (closeCartBtn) {
+                closeCartBtn.addEventListener('click', closeCartPopup);
+            }
+            
+            // Close cart when clicking on backdrop
+            if (cartBackdrop) {
+                cartBackdrop.addEventListener('click', closeCartPopup);
+            }
+            
+            // Continue shopping button
+            if (continueShoppingBtn) {
+                continueShoppingBtn.addEventListener('click', closeCartPopup);
+            }
+            
+            // Checkout button - redirect to checkout.html
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function() {
+                    window.location.href = 'checkout.html';
+                });
+            }
+            
+            // Quantity buttons functionality on product page
+            const decreaseBtn = document.querySelector('.decrease-btn');
+            const increaseBtn = document.querySelector('.increase-btn');
+            const quantityInput = document.querySelector('.quantity-input');
+            
+            if (decreaseBtn && increaseBtn && quantityInput) {
+                decreaseBtn.addEventListener('click', function() {
+                    let value = parseInt(quantityInput.value);
+                    if (value > 1) {
+                        quantityInput.value = value - 1;
+                    }
+                });
+                
+                increaseBtn.addEventListener('click', function() {
+                    let value = parseInt(quantityInput.value);
+                    quantityInput.value = value + 1;
+                });
+            }
+            
+            // Quantity buttons functionality in cart
+            const cartDecreaseBtn = document.querySelector('.cart .decrease-btn');
+            const cartIncreaseBtn = document.querySelector('.cart .increase-btn');
+            const cartQuantityInput = document.querySelector('.cart .cart-quantity');
+            
+            if (cartDecreaseBtn && cartIncreaseBtn && cartQuantityInput) {
+                cartDecreaseBtn.addEventListener('click', function() {
+                    let value = parseInt(cartQuantityInput.value);
+                    if (value > 1) {
+                        cartQuantityInput.value = value - 1;
+                        updateCartTotal();
+                    }
+                });
+                
+                cartIncreaseBtn.addEventListener('click', function() {
+                    let value = parseInt(cartQuantityInput.value);
+                    cartQuantityInput.value = value + 1;
+                    updateCartTotal();
+                });
+            }
+            
+            // Size selection in cart
+            const cartSizeOptions = document.querySelectorAll('.cart .size-option');
+            cartSizeOptions.forEach(option => {
+                option.addEventListener('change', function() {
+                    updateCartTotal();
+                });
+            });
+            
+            // Function to update cart total
+            function updateCartTotal() {
+                const selectedSize = document.querySelector('.cart input[name="cartSize"]:checked');
+                const quantity = parseInt(document.querySelector('.cart .cart-quantity').value);
+                
+                if (selectedSize) {
+                    const sizeKey = selectedSize.id.replace('cartSize', '').replace('g', '') + 'g';
+                    const price = productPrices[sizeKey];
+                    const total = (price * quantity).toFixed(2);
+                    document.querySelector('.cart-total').textContent = `€${total} EUR`;
+                }
+            }
+            
+            // Size selection on product page
+            const sizeOptions = document.querySelectorAll('input[name="size"]');
+            sizeOptions.forEach(option => {
+                option.addEventListener('change', function() {
+                    // Update price display if needed
+                    const sizeKey = this.id.replace('size', '').replace('g', '') + 'g';
+                    const price = productPrices[sizeKey];
+                    // You could update the main price display here if needed
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

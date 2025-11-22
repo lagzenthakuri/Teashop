@@ -7,7 +7,6 @@
     <title>TeaFable - Premium Tea Collection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -28,8 +27,8 @@
     </style>
 </head>
 
-<body>
-<header class="bg-white text-black py-6 px-4 sticky top-0 z-10 shadow-md">
+<body class="bg-gray-50">
+<header class="bg-white text-gray-900 py-6 px-4 sticky top-0 z-10 shadow-md">
     <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-3xl md:text-4xl heading-font font-bold">
             TEA<span class="text-red-500">SHOP</span>
@@ -49,12 +48,12 @@
                 <!-- Dropdown Menu -->
                 <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
                     <ul class="py-2">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Chinese Tea</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Green Tea</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Black Tea</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Oolong Tea</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">White Tea</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Flower Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Chinese Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Green Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Black Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Oolong Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">White Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Flower Tea</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +62,7 @@
             <a href="#contact" class="hover:text-red-600 transition">Contact</a>
 
             <!-- Currency Selector -->
-            <select class="border border-red-300 px-2 py-1 rounded-md text-red-800">
+            <select class="border border-red-300 px-2 py-1 rounded-md text-gray-700">
                 <option value="usd">🇺🇸 USD</option>
                 <option value="eur">🇪🇺 EUR</option>
                 <option value="gbp">🇬🇧 GBP</option>
@@ -104,7 +103,7 @@
 
         <!-- Mobile Currency Selector -->
         <label class="block mt-2 text-sm font-medium">Country / Currency</label>
-        <select class="border border-red-300 px-2 py-1 rounded-md text-red-800">
+        <select class="border border-red-300 px-2 py-1 rounded-md text-gray-700">
                 <option value="usd">🇺🇸 USD</option>
                 <option value="eur">🇪🇺 EUR</option>
                 <option value="gbp">🇬🇧 GBP</option>
@@ -133,7 +132,7 @@ function toggleMenu() {
             <span class="text-red-800 font-medium">Netherlands | EUR €</span>
         </div>
         <div>
-            <select class="border border-red-300 px-2 py-1 rounded-md text-red-800 bg-white">
+            <select class="border border-red-300 px-2 py-1 rounded-md text-gray-700 bg-white">
                 <option>English</option>
                 <option>Dutch</option>
                 <option>French</option>
@@ -150,35 +149,35 @@ function toggleMenu() {
         <!-- Sidebar Filters -->
         <div class="w-full lg:w-1/4">
             <!-- Tea Categories -->
-            <div class="bg-white border border-red-200 rounded-lg p-6 mb-6">
-                <h3 class="text-xl heading-font font-bold text-red-900 mb-4">Tea Categories</h3>
+            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                <h3 class="text-xl heading-font font-bold text-gray-900 mb-4">Tea Categories</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="#" class="flex items-center justify-between text-red-700 hover:text-red-900">
+                        <a href="#" class="flex items-center justify-between text-gray-700 hover:text-red-700">
                             <span>Chinese Tea</span>
                             <span class="text-red-500">✔</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-between text-red-700 hover:text-red-900">
+                        <a href="#" class="flex items-center justify-between text-gray-700 hover:text-red-700">
                             <span>Pu Erh Tea</span>
                             <span class="text-red-500">✔</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-between text-red-700 hover:text-red-900">
+                        <a href="#" class="flex items-center justify-between text-gray-700 hover:text-red-700">
                             <span>Tea Gifts</span>
                             <span class="text-red-500">✔</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-between text-red-700 hover:text-red-900">
+                        <a href="#" class="flex items-center justify-between text-gray-700 hover:text-red-700">
                             <span>Teaware</span>
                             <span class="text-red-500">✔</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-between text-red-700 hover:text-red-900">
+                        <a href="#" class="flex items-center justify-between text-gray-700 hover:text-red-700">
                             <span>Green Tea</span>
                             <span class="text-red-500">✔</span>
                         </a>
@@ -187,28 +186,28 @@ function toggleMenu() {
             </div>
 
             <!-- Filters -->
-            <div class="bg-white border border-red-200 rounded-lg p-6">
-                <h3 class="text-xl heading-font font-bold text-red-900 mb-4">Filters</h3>
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-xl heading-font font-bold text-gray-900 mb-4">Filters</h3>
                 
                 <!-- Product Type -->
                 <div class="mb-6">
                     <details class="mb-2" open>
-                        <summary class="cursor-pointer font-medium text-red-800 flex justify-between items-center">
+                        <summary class="cursor-pointer font-medium text-gray-800 flex justify-between items-center">
                             Product Type
                             <span class="text-red-500">✔</span>
                         </summary>
                         <div class="mt-2 pl-4 space-y-2">
                             <div class="flex items-center">
                                 <input type="checkbox" id="loose-leaf" class="mr-2 text-red-600">
-                                <label for="loose-leaf" class="text-red-700">Loose Leaf</label>
+                                <label for="loose-leaf" class="text-gray-700">Loose Leaf</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" id="tea-bags" class="mr-2 text-red-600">
-                                <label for="tea-bags" class="text-red-700">Tea Bags</label>
+                                <label for="tea-bags" class="text-gray-700">Tea Bags</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" id="compressed" class="mr-2 text-red-600">
-                                <label for="compressed" class="text-red-700">Compressed Tea</label>
+                                <label for="compressed" class="text-gray-700">Compressed Tea</label>
                             </div>
                         </div>
                     </details>
@@ -217,22 +216,22 @@ function toggleMenu() {
                 <!-- Brand -->
                 <div class="mb-6">
                     <details class="mb-2" open>
-                        <summary class="cursor-pointer font-medium text-red-800 flex justify-between items-center">
+                        <summary class="cursor-pointer font-medium text-gray-800 flex justify-between items-center">
                             Brand
                             <span class="text-red-500">✔</span>
                         </summary>
                         <div class="mt-2 pl-4 space-y-2">
                             <div class="flex items-center">
                                 <input type="checkbox" id="teafable" class="mr-2 text-red-600">
-                                <label for="teafable" class="text-red-700">TeaFable</label>
+                                <label for="teafable" class="text-gray-700">TeaFable</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" id="premium" class="mr-2 text-red-600">
-                                <label for="premium" class="text-red-700">Premium Collection</label>
+                                <label for="premium" class="text-gray-700">Premium Collection</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" id="artisan" class="mr-2 text-red-600">
-                                <label for="artisan" class="text-red-700">Artisan Blends</label>
+                                <label for="artisan" class="text-gray-700">Artisan Blends</label>
                             </div>
                         </div>
                     </details>
@@ -241,18 +240,18 @@ function toggleMenu() {
                 <!-- Price -->
                 <div class="mb-6">
                     <details class="mb-2" open>
-                        <summary class="cursor-pointer font-medium text-red-800 flex justify-between items-center">
+                        <summary class="cursor-pointer font-medium text-gray-800 flex justify-between items-center">
                             Price
                             <span class="text-red-500">✔</span>
                         </summary>
                         <div class="mt-2 pl-4">
                             <div class="flex justify-between mb-2">
-                                <span class="text-red-700">€5</span>
-                                <span class="text-red-700">€50</span>
+                                <span class="text-gray-700">€5</span>
+                                <span class="text-gray-700">€50</span>
                             </div>
                             <input type="range" min="5" max="50" value="25" class="w-full accent-red-600">
                             <div class="flex justify-center mt-2">
-                                <span class="text-red-800 font-medium">€5 - €50</span>
+                                <span class="text-red-700 font-medium">€5 - €50</span>
                             </div>
                         </div>
                     </details>
@@ -261,18 +260,18 @@ function toggleMenu() {
                 <!-- Availability -->
                 <div class="mb-6">
                     <details class="mb-2" open>
-                        <summary class="cursor-pointer font-medium text-red-800 flex justify-between items-center">
+                        <summary class="cursor-pointer font-medium text-gray-800 flex justify-between items-center">
                             Availability
                             <span class="text-red-500">✔</span>
                         </summary>
                         <div class="mt-2 pl-4 space-y-2">
                             <div class="flex items-center">
                                 <input type="checkbox" id="in-stock" class="mr-2 text-red-600" checked>
-                                <label for="in-stock" class="text-red-700">In Stock</label>
+                                <label for="in-stock" class="text-gray-700">In Stock</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" id="pre-order" class="mr-2 text-red-600">
-                                <label for="pre-order" class="text-red-700">Pre-order</label>
+                                <label for="pre-order" class="text-gray-700">Pre-order</label>
                             </div>
                         </div>
                     </details>
@@ -288,8 +287,8 @@ function toggleMenu() {
         <div class="w-full lg:w-3/4">
             <!-- Page Title -->
             <div class="mb-8">
-                <h1 class="text-3xl md:text-4xl heading-font font-bold text-red-900 mb-2">Green Tea Collection</h1>
-                <p class="text-red-700">Discover our premium selection of green teas, carefully sourced from the finest tea gardens.</p>
+                <h1 class="text-3xl md:text-4xl heading-font font-bold text-gray-900 mb-2">Green Tea Collection</h1>
+                <p class="text-gray-600">Discover our premium selection of green teas, carefully sourced from the finest tea gardens.</p>
             </div>
 
             <!-- Sort & View Options -->
@@ -299,7 +298,7 @@ function toggleMenu() {
                 </div>
                 <div class="flex items-center space-x-4">
                     <span class="text-red-800">Sort by:</span>
-                    <select class="border border-red-300 px-3 py-2 rounded-md text-red-800 bg-white">
+                    <select class="border border-red-300 px-3 py-2 rounded-md text-gray-700 bg-white">
                         <option>Featured</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
@@ -312,106 +311,106 @@ function toggleMenu() {
             <!-- Products Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Product 1 -->
-                <div class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-red-100">
+                <a href="product.html" class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
                     <div class="relative">
                         <img src="./assets/products/1.png" alt="Jasmine Dragon Pearls" class="w-full h-48 object-cover">
                         <span class="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs">New</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl heading-font font-bold text-red-900 mb-2">Jasmine Dragon Pearls</h3>
-                        <p class="text-red-700 mb-4 text-sm">Hand-rolled green tea scented with jasmine flowers, creating a delicate and aromatic brew.</p>
+                        <h3 class="text-xl heading-font font-bold text-gray-900 mb-2">Jasmine Dragon Pearls</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Hand-rolled green tea scented with jasmine flowers, creating a delicate and aromatic brew.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl heading-font font-bold text-red-800">€8,45</span>
+                            <span class="text-2xl heading-font font-bold text-red-700">€8,45</span>
                             <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors">Add to Cart</button>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 2 -->
-                <div class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-red-100">
+                <a href="product.html" class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
                     <div>
                         <img src="./assets/products/2.png" alt="Bi Luo Chun Green Tea" class="w-full h-48 object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl heading-font font-bold text-red-900 mb-2">Bi Luo Chun Green Tea</h3>
-                        <p class="text-red-700 mb-4 text-sm">A famous Chinese green tea with tightly curled leaves that produce a fruity and floral aroma.</p>
+                        <h3 class="text-xl heading-font font-bold text-gray-900 mb-2">Bi Luo Chun Green Tea</h3>
+                        <p class="text-gray-600 mb-4 text-sm">A famous Chinese green tea with tightly curled leaves that produce a fruity and floral aroma.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl heading-font font-bold text-red-800">€12,15</span>
+                            <span class="text-2xl heading-font font-bold text-red-700">€12,15</span>
                             <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors">Add to Cart</button>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 3 -->
-                <div class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-red-100">
+                <a href="product.html" class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
                     <div>
                         <img src="./assets/products/3.png" alt="Huang Shan Mao Feng Green Tea" class="w-full h-48 object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl heading-font font-bold text-red-900 mb-2">Huang Shan Mao Feng</h3>
-                        <p class="text-red-700 mb-4 text-sm">Premium green tea from Yellow Mountain with a delicate, sweet flavor and orchid-like aroma.</p>
+                        <h3 class="text-xl heading-font font-bold text-gray-900 mb-2">Huang Shan Mao Feng</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Premium green tea from Yellow Mountain with a delicate, sweet flavor and orchid-like aroma.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl heading-font font-bold text-red-800">€8,95</span>
+                            <span class="text-2xl heading-font font-bold text-red-700">€8,95</span>
                             <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors">Add to Cart</button>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 4 -->
-                <div class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-red-100">
+                <a href="product.html" class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
                     <div class="relative">
                         <img src="./assets/products/4.png" alt="Tai Ping Hou Kui Green Tea" class="w-full h-48 object-cover">
                         <span class="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs">Best Seller</span>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl heading-font font-bold text-red-900 mb-2">Tai Ping Hou Kui</h3>
-                        <p class="text-red-700 mb-4 text-sm">Unique flat-shaped green tea with a refreshing, orchid-like flavor and lingering sweet aftertaste.</p>
+                        <h3 class="text-xl heading-font font-bold text-gray-900 mb-2">Tai Ping Hou Kui</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Unique flat-shaped green tea with a refreshing, orchid-like flavor and lingering sweet aftertaste.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl heading-font font-bold text-red-800">€14,95</span>
+                            <span class="text-2xl heading-font font-bold text-red-700">€14,95</span>
                             <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors">Add to Cart</button>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 5 -->
-                <div class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-red-100">
+                <a href="product.html" class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
                     <div>
                         <img src="./assets/products/5.png" alt="Dragon Well Long Jing" class="w-full h-48 object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl heading-font font-bold text-red-900 mb-2">Dragon Well Long Jing</h3>
-                        <p class="text-red-700 mb-4 text-sm">One of China's most famous green teas, known for its delicate, sweet flavor and flat leaves.</p>
+                        <h3 class="text-xl heading-font font-bold text-gray-900 mb-2">Dragon Well Long Jing</h3>
+                        <p class="text-gray-600 mb-4 text-sm">One of China's most famous green teas, known for its delicate, sweet flavor and flat leaves.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl heading-font font-bold text-red-800">€10,50</span>
+                            <span class="text-2xl heading-font font-bold text-red-700">€10,50</span>
                             <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors">Add to Cart</button>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 6 -->
-                <div class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-red-100">
+                <a href="product.html" class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200">
                     <div>
                         <img src="./assets/products/6.png" alt="Gunpowder Green Tea" class="w-full h-48 object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl heading-font font-bold text-red-900 mb-2">Gunpowder Green Tea</h3>
-                        <p class="text-red-700 mb-4 text-sm">Tightly rolled pearls that unfurl when brewed, offering a robust flavor with smoky notes.</p>
+                        <h3 class="text-xl heading-font font-bold text-gray-900 mb-2">Gunpowder Green Tea</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Tightly rolled pearls that unfurl when brewed, offering a robust flavor with smoky notes.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl heading-font font-bold text-red-800">€7,25</span>
+                            <span class="text-2xl heading-font font-bold text-red-700">€7,25</span>
                             <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors">Add to Cart</button>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Pagination -->
             <div class="flex justify-center mt-12">
                 <nav class="flex items-center space-x-2">
-                    <a href="#" class="px-3 py-2 text-red-700 hover:text-red-900 hover:bg-red-50 rounded-lg">Previous</a>
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-red-700 hover:bg-red-50 rounded-lg">Previous</a>
                     <a href="#" class="px-3 py-2 bg-red-700 text-white rounded-lg">1</a>
-                    <a href="#" class="px-3 py-2 text-red-700 hover:text-red-900 hover:bg-red-50 rounded-lg">2</a>
-                    <a href="#" class="px-3 py-2 text-red-700 hover:text-red-900 hover:bg-red-50 rounded-lg">3</a>
-                    <a href="#" class="px-3 py-2 text-red-700 hover:text-red-900 hover:bg-red-50 rounded-lg">Next</a>
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-red-700 hover:bg-red-50 rounded-lg">2</a>
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-red-700 hover:bg-red-50 rounded-lg">3</a>
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-red-700 hover:bg-red-50 rounded-lg">Next</a>
                 </nav>
             </div>
         </div>
@@ -425,7 +424,7 @@ function toggleMenu() {
                 <div class="md:col-span-2">
                     <h3 class="text-2xl heading-font font-bold text-white mb-4">TEA<span
                             class="text-red-300">FABLE</span></h3>
-                    <p class="mb-4 max-w-md">Discover the magical tale behind each of our carefully crafted tea blends.
+                    <p class="mb-4 max-w-md text-red-100">Discover the magical tale behind each of our carefully crafted tea blends.
                         Join us on a journey of flavor, tradition, and enchantment.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Facebook">
@@ -454,15 +453,15 @@ function toggleMenu() {
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition-colors">Our Story</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Tea Collections</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Brewing Guide</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Tea Collections</a></li>
+                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Brewing Guide</a></li>
+                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Contact Us</h4>
-                    <ul class="space-y-2">
+                    <ul class="space-y-2 text-red-200">
                         <li>123 Tea Garden Lane</li>
                         <li>London, UK</li>
                         <li>hello@teafable.com</li>
@@ -470,7 +469,7 @@ function toggleMenu() {
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-red-800 mt-8 pt-8 text-sm text-center">
+            <div class="border-t border-red-800 mt-8 pt-8 text-sm text-center text-red-300">
                 <p>&copy; 2023 TeaFable. All rights reserved.</p>
             </div>
         </div>

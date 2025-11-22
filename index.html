@@ -1,40 +1,704 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WS playground</title>
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeaFable - The Magical Tale Behind TeaFable's Brew</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .heading-font {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .tea-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tea-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
 </head>
+
 <body>
-<header class="logo">
-  <a href="https://www.jetbrains.com/webstorm/">
-    <img src="/webstorm-logo.svg" alt="WebStorm logo" width="344"
-         height="90">
-  </a>
+<header class="bg-white text-black py-6 px-4 sticky top-0 z-10 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl md:text-4xl heading-font font-bold">
+            TEA<span class="text-red-500">SHOP</span>
+        </h1>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8 items-center">
+            <a href="#home" class="hover:text-red-600 transition">Home</a>
+
+            <!-- Our Teas Dropdown -->
+            <div class="relative group">
+                <button class="hover:text-red-600 transition flex items-center gap-1">
+                    Our Teas
+                    <span>▼</span>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+                    <ul class="py-2">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Chinese Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Green Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Black Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Oolong Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">White Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-red-50">Flower Tea</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#journey" class="hover:text-red-600 transition">Journey</a>
+            <a href="#contact" class="hover:text-red-600 transition">Contact</a>
+
+            <!-- Currency Selector -->
+            <select class="border border-red-300 px-2 py-1 rounded-md text-red-800">
+                <option value="usd">🇺🇸 USD</option>
+                <option value="eur">🇪🇺 EUR</option>
+                <option value="gbp">🇬🇧 GBP</option>
+                <option value="cny">🇨🇳 CNY</option>
+                <option value="inr">🇮🇳 INR</option>
+                <option value="npr">🇳🇵 NPR</option>
+            </select>
+        </nav>
+
+        <!-- Right Buttons -->
+        <div class="flex space-x-3">
+            <button class="hover:text-red-600 transition">Join Us</button>
+            <button class="bg-red-600 border border-red-700 p-2 text-white rounded-lg hover:bg-red-700 transition">Order Now</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg mt-4 p-4">
+        <a href="#home" class="block py-2 hover:text-red-600">Home</a>
+
+        <details class="py-2">
+            <summary class="cursor-pointer font-medium">Our Teas</summary>
+            <ul class="pl-4 mt-2 space-y-1">
+                <li><a href="#" class="block py-1 hover:text-red-600">Chinese Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-red-600">Green Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-red-600">Black Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-red-600">Oolong Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-red-600">White Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-red-600">Flower Tea</a></li>
+            </ul>
+        </details>
+
+        <a href="#journey" class="block py-2 hover:text-red-600">Journey</a>
+        <a href="#contact" class="block py-2 hover:text-red-600">Contact</a>
+
+        <!-- Mobile Currency Selector -->
+        <label class="block mt-2 text-sm font-medium">Country / Currency</label>
+        <select class="border border-red-300 px-2 py-1 rounded-md text-red-800">
+                <option value="usd">🇺🇸 USD</option>
+                <option value="eur">🇪🇺 EUR</option>
+                <option value="gbp">🇬🇧 GBP</option>
+                <option value="cny">🇨🇳 CNY</option>
+                <option value="inr">🇮🇳 INR</option>
+                <option value="npr">🇳🇵 NPR</option>
+            </select>
+    </div>
 </header>
-<main id="app">
-  <h1 class="title">
-    Thank you for trying it out. <br /> Your first project is up and running
-    now.
-  </h1>
-  <section class="counter">
-    <div class="counter-info">
-      <p class="counter-text">Counter is</p>
-      <p class="counter-value" id="counter-value"></p>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+</script>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative py-20 md:py-36 px-4 text-white bg-cover bg-center" style="background-image: url('./assets/banner/8.png');">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
+                The Magical Tale Behind TeaFable's Brew
+            </h2>
+
+            <p class="text-base md:text-lg lg:text-xl mb-10 max-w-2xl mx-auto">
+                Discover the enchanting journey of our carefully crafted teas, each with its own unique story.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <button class="bg-white text-red-700 px-8 py-3 rounded-full font-medium hover:bg-red-50 transition shadow-lg w-full md:w-auto">
+                    Explore Our Teas
+                </button>
+
+                <button class="border-2 border-white backdrop-blur-sm bg-white/30 text-white 
+               px-8 py-3 rounded-full font-medium w-full md:w-auto
+               hover:bg-white hover:text-red-700 transition">
+                    Our Story
+                </button>
+            </div>
+        </div>
+
+        <!-- TEA CARDS CONTAINER -->
+        <!-- No overlap on mobile. Overlap only on md+ -->
+        <div class="w-[95%] sm:w-[92%] md:w-[90%] mx-auto mt-10
+           md:absolute md:left-1/2 md:-translate-x-1/2 md:-bottom-28">
+            <div id="tea-cards-containers" class="bg-white border border-red-300 rounded-2xl shadow-xl p-4 sm:p-6
+             grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+        </div>
+    </section>
+
+    <div class="h-28"></div>
+
+    <!-- Tea Collections Section - REDESIGNED -->
+    <section id="teas" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl heading-font font-bold text-center text-red-900 mb-4">Our Tea Collections
+            </h2>
+            <p class="text-lg text-red-800 text-center mb-12 max-w-2xl mx-auto">Explore our premium selection of teas,
+                carefully sourced and crafted for the perfect cup.</p>
+
+            <!-- Best Sellers Section -->
+            <div class="mb-16">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl heading-font font-bold text-red-900">Best Sellers</h3>
+                    <a href="#" class="text-red-700 hover:text-red-900 font-medium flex items-center gap-2">
+                        See More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-red-700 mb-6">Our most loved teas, chosen by customers worldwide for their exceptional
+                    quality and taste.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="best-sellers-container"></div>
+            </div>
+
+            <!-- New Arrivals Section -->
+            <div class="mb-16">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl heading-font font-bold text-red-900">New Arrivals</h3>
+                    <a href="#" class="text-red-700 hover:text-red-900 font-medium flex items-center gap-2">
+                        See More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-red-700 mb-6">Discover the latest additions to our collection, fresh from the finest tea
+                    gardens.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="new-arrivals-container"></div>
+            </div>
+
+            <!-- Discount Rates Section -->
+            <div>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl heading-font font-bold text-red-900">Special Discounts</h3>
+                    <a href="#" class="text-red-700 hover:text-red-900 font-medium flex items-center gap-2">
+                        See More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-red-700 mb-6">Limited time offers on premium teas. Stock up on your favorites while
+                    supplies last!</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="discount-container"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+     <div class="py-5 bg-white">
+    <div class="container flex flex-col items-center justify-center w-full p-6 mx-auto text-center xl:px-0">
+        <div class="text-sm font-bold tracking-wider text-red-600 uppercase">Customer Reviews</div>
+        <h2 class="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-red-900 lg:leading-tight lg:text-4xl">
+            What Tea Lovers Say About Us
+        </h2>
+        <p class="max-w-2xl py-4 text-lg leading-normal text-red-700 lg:text-xl xl:text-xl">
+            Real stories from people who enjoy our freshly brewed teas every day. Their words inspire us to craft the perfect cup.
+        </p>
     </div>
-    <div class="counter-interaction">
-      <button id="increaseByOne" type="button">+1</button>
-      <button id="increaseByTwo" type="button">+2</button>
-      <button id="decreaseByOne" type="button">-1</button>
-      <button id="decreaseByTwo" type="button">-2</button>
+
+    <div class="container p-6 mx-auto mb-10 xl:px-0">
+        <div class="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
+
+            <!-- BIG CARD -->
+            <div class="lg:col-span-2 xl:col-auto">
+                <div class="flex flex-col justify-between w-full h-full px-6 py-6 bg-red-50 md:px-14 rounded-2xl md:py-14">
+                    <p class="text-2xl leading-normal text-red-900">
+                        "The <mark class="mx-1 text-red-800 bg-red-100 rounded-md ring-red-100 ring-4">
+                        Thai Milk Tea</mark> is honestly the best I've had. Smooth, creamy, and perfectly balanced. It has become my daily refreshment!"
+                    </p>
+                    <div class="flex items-center mt-8 space-x-3">
+                        <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                            <img alt="Avatar of Aarati Shrestha" src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&fit=crop&w=100&h=100&q=80" loading="lazy" />
+                        </div>
+                        <div>
+                            <div class="text-lg font-medium text-red-900">Aarati Shrestha</div>
+                            <div class="text-red-700">Regular Customer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div>
+                <div class="flex flex-col justify-between w-full h-full px-6 py-6 bg-red-50 md:px-14 rounded-2xl md:py-14">
+                    <p class="text-2xl leading-normal text-red-900">
+                        "Their <mark class="mx-1 text-red-800 bg-red-100 rounded-md ring-red-100 ring-4">
+                        Bubble Tea</mark> is refreshing and not overly sweet. The pearls are soft and fresh — exactly how bubble tea should be!"
+                    </p>
+                    <div class="flex items-center mt-8 space-x-3">
+                        <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                            <img alt="Avatar of Sanjay Karki" src="https://images.unsplash.com/photo-1463453091185-61582044d556?crop=faces&fit=crop&w=100&h=100&q=80" loading="lazy" />
+                        </div>
+                        <div>
+                            <div class="text-lg font-medium text-red-900">Sanjay Karki</div>
+                            <div class="text-red-700">Tea Enthusiast</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div>
+                <div class="flex flex-col justify-between w-full h-full px-6 py-6 bg-red-50 md:px-14 rounded-2xl md:py-14">
+                    <p class="text-2xl leading-normal text-red-900">
+                        "I love how fresh and aromatic their teas are. The <mark class="mx-1 text-red-800 bg-red-100 rounded-md ring-red-100 ring-4">
+                        herbal blends</mark> are perfect for relaxing after a long day."
+                    </p>
+                    <div class="flex items-center mt-8 space-x-3">
+                        <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                            <img alt="Avatar of Mina Lama" src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?crop=faces&fit=crop&w=100&h=100&q=80" loading="lazy" />
+                        </div>
+                        <div>
+                            <div class="text-lg font-medium text-red-900">Mina Lama</div>
+                            <div class="text-red-700">Wellness Blogger</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </section>
-</main>
-<footer class="technologies">
-  <img src="/technologies.svg" alt="List of supported technologies">
-</footer>
-<script type="module" src="/src/main.js"></script>
+</div>
+
+    
+    <!--Magic Journey Section -->
+    <section id="journey" class="py-16 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row md:justify-between text-center md:text-left gap-6 mb-10">
+            <h2 class="text-3xl md:text-5xl heading-font font-bold text-red-900">
+                Be a Part of TeaFable's Magic Journey
+            </h2>
+
+            <div class="w-full md:w-96 mx-auto md:mx-0">
+                <p class="text-lg text-red-800 mb-6">
+                    Join our community of tea lovers and experience the magic in every cup.
+                </p>
+                <div class="flex items-center justify-center md:justify-start gap-3">
+                    <button class="bg-red-800 text-white hover:bg-red-600 rounded-lg px-4 py-2 transition">
+                        I'm Interested
+                    </button>
+                    <button class="border border-red-600 text-red-700 rounded-lg px-4 py-2 hover:bg-red-50 transition">
+                        Learn more
+                    </button>
+                </div>
+            </div>
+        </div>         
+
+        <!-- Features + Image -->
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-6">
+
+            <!-- Left Features -->
+            <div class="flex flex-col items-center">
+                <div class="border border-red-200 p-4 m-2 rounded-lg w-64 text-center bg-red-50">
+                    <i class="fa-solid fa-award text-4xl text-red-700 mb-2"></i>
+                    <h2 class="font-bold text-2xl text-red-900">Brand Recognition</h2>
+                    <p class="text-red-700">Gain some brand recognitions</p>
+                </div>
+                <div class="border border-red-200 p-4 m-2 rounded-lg w-64 text-center bg-red-50">
+                    <i class="fa-solid fa-user text-4xl text-red-700 mb-2"></i>
+                    <h2 class="font-bold text-2xl text-red-900">Exclusive Recipes</h2>
+                    <p class="text-red-700">Access exclusive recipes to make tea</p>
+                </div>
+            </div>
+
+            <!-- Middle Image -->
+            <img src="./assets/products/tealeaves.png" alt="Tea Leaves" class="h-72 md:h-96 rounded-xl object-contain" />
+
+            <!-- Right Features -->
+            <div class="flex flex-col items-center">
+                <div class="border border-red-200 p-4 m-2 rounded-lg w-64 text-center bg-red-50">
+                    <i class="fa-solid fa-headset text-4xl text-red-700 mb-2"></i>
+                    <h2 class="font-bold text-2xl text-red-900">Ongoing Support</h2>
+                    <p class="text-red-700">Receive continuous support from staff</p>
+                </div>
+                <div class="border border-red-200 p-4 m-2 rounded-lg w-64 text-center bg-red-50">
+                    <i class="fa-solid fa-chart-line text-4xl text-red-700 mb-2"></i>
+                    <h2 class="font-bold text-2xl text-red-900">Proven Success</h2>
+                    <p class="text-red-700">A proven tea business</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+<!-- Refresh Section -->
+<section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-6xl">
+
+        <!-- Outer Card -->
+        <div class="relative bg-white border border-red-300 rounded-3xl 
+                    flex flex-col md:flex-row items-center
+                    px-8 py-12 md:py-16 lg:py-20 overflow-visible">
+
+            <!-- LEFT TEXT -->
+            <div class="flex-1 text-center md:text-left md:pr-10 z-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-red-900 leading-tight">
+                    Refresh Your Day! <br />
+                    <span class="text-red-900">Savor the Taste</span>
+                </h2>
+
+                <p class="text-red-700 text-lg md:text-xl mt-4 max-w-lg mx-auto md:mx-0">
+                    Indulge in our signature drinks crafted to perfection. 
+                    Thai Tea and Bubble Tea await to brighten your day.
+                </p>
+
+                <!-- BUTTONS -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+                    <button class="bg-red-700 text-white px-8 py-3 rounded-full font-medium hover:bg-red-800 transition">
+                        Order now
+                    </button>
+
+                    <button class="border border-red-700 text-red-700 px-8 py-3 rounded-full font-medium hover:bg-red-50 transition">
+                        Join franchise
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="flex-1 flex justify-center mt-10 md:mt-0 relative">
+
+                <!-- MOBILE VERSION (no overlap) -->
+                <img 
+                    src="./assets/wizard.png"
+                    alt="Wizard"
+                    class="h-56 sm:h-64 object-contain block md:hidden mt-8"
+                />
+
+                <!-- DESKTOP VERSION (absolute overlap) -->
+                <img 
+                    src="./assets/wizard.png"
+                    alt="Wizard"
+                    class="hidden md:block h-[420px] lg:h-[520px] object-contain 
+                           absolute right-0 md:right-[-40px] top-1/2 -translate-y-1/2 z-20"
+                />
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-red-900 text-red-200 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl heading-font font-bold text-white mb-4">TEA<span
+                            class="text-red-300">FABLE</span></h3>
+                    <p class="mb-4 max-w-md">Discover the magical tale behind each of our carefully crafted tea blends.
+                        Join us on a journey of flavor, tradition, and enchantment.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tea Collections</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Brewing Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li>123 Tea Garden Lane</li>
+                        <li>London, UK</li>
+                        <li>hello@teafable.com</li>
+                        <li>+44 20 1234 5678</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-red-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2023 TeaFable. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const teaDatas = [
+                {
+                    id: 1,
+                    name: "Dragon Well Long Jing",
+                    type: "green",
+                    description: "Green tea.",
+                    url: "./assets/1.png"
+                },
+                {
+                    id: 2,
+                    name: "Tie Guan Yin",
+                    type: "oolong",
+                    description: "A premium oolong tea.",
+                    url: "./assets/2.png"
+                },
+                {
+                    id: 3,
+                    name: "Jin Jun Mei",
+                    type: "black",
+                    description: "A luxurious black tea.",
+                    url: "./assets/3.png"
+                },
+                {
+                    id: 4,
+                    name: "Silver Needle",
+                    type: "white",
+                    description: "A delicate white tea.",
+                    url: "./assets/4.png"
+                }
+            ];
+
+            function renderTeaCards(teas) {
+                const container = document.getElementById("tea-cards-containers");
+                if (!container) {
+                    console.error("Container not found!");
+                    return;
+                }
+
+                container.innerHTML = "";
+
+                teas.forEach(tea => {
+                    const card = document.createElement("div");
+                    card.className =
+                        "bg-white rounded-xl overflow-hidden shadow-md border border-red-100";
+
+                    card.innerHTML = `
+            <div class="flex flex-col sm:flex-row">
+    <img 
+        src="${tea.url}" 
+        alt="${tea.name}"
+        class="h-40 w-full sm:w-auto bg-red-200 object-cover rounded-lg"
+    />
+
+    <div class="p-5">
+        <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-bold text-red-900">
+                ${tea.name}
+            </h3>
+        </div>
+
+        <p class="text-red-700">
+            ${tea.description}
+        </p>
+    </div>
+</div>
+
+            `;
+
+                    container.appendChild(card);
+                });
+            }
+
+            renderTeaCards(teaDatas);
+
+        });
+    </script>
+
+    <script>
+        // Tea data
+        const teaData = [
+            {
+                id: 1,
+                name: "Dragon Well Long Jing",
+                type: "green",
+                description: "One of China's most famous green teas, known for its delicate, sweet flavor and flat, sword-shaped leaves.",
+                origin: "Hangzhou, China",
+                flavor: "Sweet, vegetal, with a chestnut-like finish",
+                brewing: "175°F for 2-3 minutes",
+                url: './assets/products/1.png',
+                price: "€24.95"
+            },
+            {
+                id: 2,
+                name: "Tie Guan Yin",
+                type: "oolong",
+                description: "A premium oolong tea with a complex floral aroma and a sweet, lingering aftertaste.",
+                origin: "Fujian, China",
+                flavor: "Floral, orchid notes with a honey-like sweetness",
+                brewing: "195°F for 3-4 minutes",
+                url: './assets/products/2.png',
+                price: "€29.95"
+            },
+            {
+                id: 3,
+                name: "Jin Jun Mei",
+                type: "black",
+                description: "A luxurious black tea made from delicate golden buds, producing a rich, honey-like sweetness.",
+                origin: "Fujian, China",
+                flavor: "Sweet, malty, with honey and cocoa notes",
+                brewing: "205°F for 3-4 minutes",
+                url: './assets/products/3.png',
+                price: "€39.95"
+            },
+            {
+                id: 4,
+                name: "Silver Needle",
+                type: "white",
+                description: "A delicate white tea made only from young tea buds, producing a light, sweet, and refreshing cup.",
+                origin: "Fujian, China",
+                flavor: "Delicate, sweet, with melon and honey notes",
+                brewing: "175°F for 4-5 minutes",
+                url: './assets/products/4.png',
+                price: "€32.95"
+            },
+            {
+                id: 5,
+                name: "Pu-erh Tuo Cha",
+                type: "puerh",
+                description: "A fermented tea known for its earthy flavor and potential health benefits, compressed into bowl-shaped pieces.",
+                origin: "Yunnan, China",
+                flavor: "Earthy, woody, with a smooth, rich texture",
+                brewing: "212°F for 2-3 minutes (can be steeped multiple times)",
+                url: './assets/products/5.png',
+                price: "€19.95"
+            },
+            {
+                id: 6,
+                name: "Bi Luo Chun",
+                type: "green",
+                description: "A famous green tea with tightly curled leaves that resemble small snails, producing a fruity and floral aroma.",
+                origin: "Jiangsu, China",
+                flavor: "Fruity, floral, with a fresh, clean finish",
+                brewing: "175°F for 2-3 minutes",
+                url: './assets/products/6.png',
+                price: "€27.95"
+            },
+            {
+                id: 7,
+                name: "Da Hong Pao",
+                type: "oolong",
+                description: "A highly prized oolong tea known as 'Big Red Robe', with a rich, mineral flavor and long-lasting aftertaste.",
+                origin: "Fujian, China",
+                flavor: "Mineral, roasted, with orchid and honey notes",
+                brewing: "195°F for 3-4 minutes",
+                url: './assets/products/7.png',
+                price: "€49.95"
+            },
+            {
+                id: 8,
+                name: "Lapsang Souchong",
+                type: "black",
+                description: "A distinctive black tea smoked over pine wood, creating a bold, smoky flavor profile.",
+                origin: "Fujian, China",
+                flavor: "Smoky, pine, with a hint of sweetness",
+                brewing: "205°F for 3-4 minutes",
+                url: './assets/products/8.png',
+                price: "€22.95"
+            },
+            {
+                id: 9,
+                name: "White Peony",
+                type: "white",
+                description: "A white tea made from buds and the first two leaves, offering a fuller flavor than Silver Needle.",
+                origin: "Fujian, China",
+                flavor: "Mellow, sweet, with floral and honey notes",
+                brewing: "180°F for 4-5 minutes",
+                url: './assets/products/9.png',
+                price: "€18.95"
+            }
+        ];
+
+        // Function to create tea card HTML
+        function createTeaCard(tea) {
+            return `
+                <div class="tea-card bg-white rounded-2xl overflow-hidden shadow-md border border-red-100">
+                    <div>
+                        <img src="${tea.url}" alt="${tea.name}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl heading-font font-bold text-red-900">${tea.name}</h3>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm capitalize">${tea.type} Tea</span>
+                            </div>
+                            <p class="text-red-700 mb-4">${tea.description}</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <span class="text-2xl heading-font font-bold text-red-800">${tea.price}</span>
+                                <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render products for each category
+        document.addEventListener('DOMContentLoaded', function () {
+            // Best Sellers: products 1,2,3,4
+            const bestSellersContainer = document.getElementById('best-sellers-container');
+            if (bestSellersContainer) {
+                const bestSellers = [teaData[0], teaData[1], teaData[2], teaData[3]];
+                bestSellersContainer.innerHTML = bestSellers.map(tea => createTeaCard(tea)).join('');
+            }
+
+            // New Arrivals: products 4,5,6,7
+            const newArrivalsContainer = document.getElementById('new-arrivals-container');
+            if (newArrivalsContainer) {
+                const newArrivals = [teaData[3], teaData[4], teaData[5], teaData[6]];
+                newArrivalsContainer.innerHTML = newArrivals.map(tea => createTeaCard(tea)).join('');
+            }
+
+            // Discount Rates: products 8,9,1,2
+            const discountContainer = document.getElementById('discount-container');
+            if (discountContainer) {
+                const discounts = [teaData[7], teaData[8], teaData[0], teaData[1]];
+                discountContainer.innerHTML = discounts.map(tea => createTeaCard(tea)).join('');
+            }
+        });
+    </script>
 </body>
+
 </html>

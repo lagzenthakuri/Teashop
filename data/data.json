@@ -1,0 +1,133 @@
+{
+  "company": {
+    "name": "TeaFable",
+    "tagline": "The Magical Tale Behind TeaFable's Brew",
+    "description": "Discover the enchanting journey of our carefully crafted teas, each with its own unique story."
+  },
+  "cta": {
+    "title": "Be a Part of TeaFable's Magic Journey",
+    "description": "Join our community of tea lovers and experience the magic in every cup."
+  },
+  "refresh": {
+    "title": "Refresh Your Day!",
+    "subtitle": "Savor the Taste",
+    "benefits": [
+      {
+        "title": "Energize",
+        "description": "Start your day with our invigorating morning blends.",
+        "icon": "energy"
+      },
+      {
+        "title": "Relax",
+        "description": "Unwind with our calming herbal infusions.",
+        "icon": "relax"
+      },
+      {
+        "title": "Inspire",
+        "description": "Find creativity with our unique flavor combinations.",
+        "icon": "inspire"
+      }
+    ]
+  },
+  "teas": [
+    {
+      "id": 1,
+      "name": "Dragon Well Long Jing",
+      "type": "green",
+      "image": "https://images.unsplash.com/photo-1507914372361-6e0a0a7a1a2e",
+      "description": "One of China's most famous green teas, known for its delicate, sweet flavor and flat, sword-shaped leaves.",
+      "origin": "Hangzhou, China",
+      "flavor": "Sweet, vegetal, with a chestnut-like finish",
+      "brewing": "175°F for 2-3 minutes",
+      "price": "€24.95"
+    },
+    {
+      "id": 2,
+      "name": "Tie Guan Yin",
+      "type": "oolong",
+      "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9",
+      "description": "A premium oolong tea with a complex floral aroma and a sweet, lingering aftertaste.",
+      "origin": "Fujian, China",
+      "flavor": "Floral, orchid notes with a honey-like sweetness",
+      "brewing": "195°F for 3-4 minutes",
+      "price": "€29.95"
+    },
+    {
+      "id": 3,
+      "name": "Jin Jun Mei",
+      "type": "black",
+      "image": "https://images.unsplash.com/photo-1587740896339-4e27b1e5dbf4",
+      "description": "A luxurious black tea made from delicate golden buds, producing a rich, honey-like sweetness.",
+      "origin": "Fujian, China",
+      "flavor": "Sweet, malty, with honey and cocoa notes",
+      "brewing": "205°F for 3-4 minutes",
+      "price": "€39.95"
+    },
+    {
+      "id": 4,
+      "name": "Silver Needle",
+      "type": "white",
+      "image": "https://images.unsplash.com/photo-1587049352847-4a1d14d2f11f",
+      "description": "A delicate white tea made only from young tea buds, producing a light, sweet, and refreshing cup.",
+      "origin": "Fujian, China",
+      "flavor": "Delicate, sweet, with melon and honey notes",
+      "brewing": "175°F for 4-5 minutes",
+      "price": "€32.95"
+    },
+    {
+      "id": 5,
+      "name": "Pu-erh Tuo Cha",
+      "type": "puerh",
+      "image": "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907",
+      "description": "A fermented tea known for its earthy flavor and potential health benefits, compressed into bowl-shaped pieces.",
+      "origin": "Yunnan, China",
+      "flavor": "Earthy, woody, with a smooth, rich texture",
+      "brewing": "212°F for 2-3 minutes (can be steeped multiple times)",
+      "price": "€19.95"
+    },
+    {
+      "id": 6,
+      "name": "Bi Luo Chun",
+      "type": "green",
+      "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
+      "description": "A famous green tea with tightly curled leaves that resemble small snails, producing a fruity and floral aroma.",
+      "origin": "Jiangsu, China",
+      "flavor": "Fruity, floral, with a fresh, clean finish",
+      "brewing": "175°F for 2-3 minutes",
+      "price": "€27.95"
+    },
+    {
+      "id": 7,
+      "name": "Da Hong Pao",
+      "type": "oolong",
+      "image": "https://images.unsplash.com/photo-1532634983-ef63200f2116",
+      "description": "A highly prized oolong tea known as 'Big Red Robe', with a rich, mineral flavor and long-lasting aftertaste.",
+      "origin": "Fujian, China",
+      "flavor": "Mineral, roasted, with orchid and honey notes",
+      "brewing": "195°F for 3-4 minutes",
+      "price": "€49.95"
+    },
+    {
+      "id": 8,
+      "name": "Lapsang Souchong",
+      "type": "black",
+      "image": "https://images.unsplash.com/photo-1615485737458-e7bf279f8436",
+      "description": "A distinctive black tea smoked over pine wood, creating a bold, smoky flavor profile.",
+      "origin": "Fujian, China",
+      "flavor": "Smoky, pine, with a hint of sweetness",
+      "brewing": "205°F for 3-4 minutes",
+      "price": "€22.95"
+    },
+    {
+      "id": 9,
+      "name": "White Peony",
+      "type": "white",
+      "image": "https://images.unsplash.com/photo-1563170423-18f482d82f27",
+      "description": "A white tea made from buds and the first two leaves, offering a fuller flavor than Silver Needle.",
+      "origin": "Fujian, China",
+      "flavor": "Mellow, sweet, with floral and honey notes",
+      "brewing": "180°F for 4-5 minutes",
+      "price": "€18.95"
+    }
+  ]
+}

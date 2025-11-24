@@ -8,22 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
     <script src="./js/tailwind-config.js"></script>
-    <style>
-        .tea-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
 
-        .tea-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
 </head>
 
 <body class="bg-primary-bg text-primary-text">
     <header class="bg-primary-bg text-primary-text py-6 px-4 sticky top-0 z-10 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl md:text-4xl heading-font font-bold">
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2">
                 TEA<span class="text-accent">SHOP</span>
             </h1>
 
@@ -58,7 +49,7 @@
                     </div>
                 </div>
 
-                <a href="#journey" class="hover:text-accent transition">Journey</a>
+                <a href="journey.html" class="hover:text-accent transition">Journey</a>
                 <a href="contact.html" class="hover:text-accent transition">Contact</a>
 
                 <!-- Currency Selector -->
@@ -100,7 +91,7 @@
                 </ul>
             </details>
 
-            <a href="#journey" class="block py-2 hover:text-accent">Journey</a>
+            <a href="journey.html" class="block py-2 hover:text-accent">Journey</a>
             <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
 
             <!-- Mobile Currency Selector -->
@@ -152,7 +143,7 @@
             <div class="w-full lg:w-1/4">
                 <!-- Tea Categories -->
                 <div class="bg-primary-bg border border-secondary rounded-lg p-6 mb-6">
-                    <h3 class="text-xl heading-font font-bold text-primary-text mb-4">Tea Categories</h3>
+                    <h3 class="text-xl font-serif font-bold text-primary-text mb-4">Tea Categories</h3>
                     <ul class="space-y-3">
                         <li>
                             <a href="#" class="flex items-center justify-between text-primary-text hover:text-accent">
@@ -189,7 +180,7 @@
 
                 <!-- Filters -->
                 <div class="bg-primary-bg border border-secondary rounded-lg p-6">
-                    <h3 class="text-xl heading-font font-bold text-primary-text mb-4">Filters</h3>
+                    <h3 class="text-xl font-serif font-bold text-primary-text mb-4">Filters</h3>
 
                     <!-- Product Type -->
                     <div class="mb-6">
@@ -293,7 +284,7 @@
             <div class="w-full lg:w-3/4">
                 <!-- Page Title -->
                 <div class="mb-8">
-                    <h1 class="text-3xl md:text-4xl heading-font font-bold text-primary-text mb-2">Green Tea Collection
+                    <h1 class="text-3xl md:text-4xl font-serif font-bold text-primary-text mb-2">Green Tea Collection
                     </h1>
                     <p class="text-primary-text">Discover our premium selection of green teas, carefully sourced from
                         the
@@ -322,7 +313,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product 1 -->
                     <a href="product.html"
-                        class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                        class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                         <div class="relative">
                             <img src="./assets/products/1.png" alt="Jasmine Dragon Pearls"
                                 class="w-full h-48 object-cover">
@@ -330,12 +321,12 @@
                                 class="absolute top-2 right-2 bg-promo text-white px-2 py-1 rounded-full text-xs">New</span>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl heading-font font-bold text-primary-text mb-2">Jasmine Dragon Pearls</h3>
+                            <h3 class="text-xl font-serif font-bold text-primary-text mb-2">Jasmine Dragon Pearls</h3>
                             <p class="text-primary-text mb-4 text-sm">Hand-rolled green tea scented with jasmine
                                 flowers,
                                 creating a delicate and aromatic brew.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl heading-font font-bold text-accent">€8,45</span>
+                                <span class="text-2xl font-serif font-bold text-accent">€8,45</span>
                                 <button
                                     class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">Add
                                     to Cart</button>
@@ -345,18 +336,18 @@
 
                     <!-- Product 2 -->
                     <a href="product.html"
-                        class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                        class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                         <div>
                             <img src="./assets/products/2.png" alt="Bi Luo Chun Green Tea"
                                 class="w-full h-48 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl heading-font font-bold text-primary-text mb-2">Bi Luo Chun Green Tea</h3>
+                            <h3 class="text-xl font-serif font-bold text-primary-text mb-2">Bi Luo Chun Green Tea</h3>
                             <p class="text-primary-text mb-4 text-sm">A famous Chinese green tea with tightly curled
                                 leaves
                                 that produce a fruity and floral aroma.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl heading-font font-bold text-accent">€12,15</span>
+                                <span class="text-2xl font-serif font-bold text-accent">€12,15</span>
                                 <button
                                     class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">Add
                                     to Cart</button>
@@ -366,17 +357,17 @@
 
                     <!-- Product 3 -->
                     <a href="product.html"
-                        class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                        class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                         <div>
                             <img src="./assets/products/3.png" alt="Huang Shan Mao Feng Green Tea"
                                 class="w-full h-48 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl heading-font font-bold text-primary-text mb-2">Huang Shan Mao Feng</h3>
+                            <h3 class="text-xl font-serif font-bold text-primary-text mb-2">Huang Shan Mao Feng</h3>
                             <p class="text-primary-text mb-4 text-sm">Premium green tea from Yellow Mountain with a
                                 delicate, sweet flavor and orchid-like aroma.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl heading-font font-bold text-accent">€8,95</span>
+                                <span class="text-2xl font-serif font-bold text-accent">€8,95</span>
                                 <button
                                     class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">Add
                                     to Cart</button>
@@ -386,7 +377,7 @@
 
                     <!-- Product 4 -->
                     <a href="product.html"
-                        class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                        class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                         <div class="relative">
                             <img src="./assets/products/4.png" alt="Tai Ping Hou Kui Green Tea"
                                 class="w-full h-48 object-cover">
@@ -394,11 +385,11 @@
                                 Seller</span>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl heading-font font-bold text-primary-text mb-2">Tai Ping Hou Kui</h3>
+                            <h3 class="text-xl font-serif font-bold text-primary-text mb-2">Tai Ping Hou Kui</h3>
                             <p class="text-primary-text mb-4 text-sm">Unique flat-shaped green tea with a refreshing,
                                 orchid-like flavor and lingering sweet aftertaste.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl heading-font font-bold text-accent">€14,95</span>
+                                <span class="text-2xl font-serif font-bold text-accent">€14,95</span>
                                 <button
                                     class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">Add
                                     to Cart</button>
@@ -408,18 +399,18 @@
 
                     <!-- Product 5 -->
                     <a href="product.html"
-                        class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                        class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                         <div>
                             <img src="./assets/products/5.png" alt="Dragon Well Long Jing"
                                 class="w-full h-48 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl heading-font font-bold text-primary-text mb-2">Dragon Well Long Jing</h3>
+                            <h3 class="text-xl font-serif font-bold text-primary-text mb-2">Dragon Well Long Jing</h3>
                             <p class="text-primary-text mb-4 text-sm">One of China's most famous green teas, known for
                                 its
                                 delicate, sweet flavor and flat leaves.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl heading-font font-bold text-accent">€10,50</span>
+                                <span class="text-2xl font-serif font-bold text-accent">€10,50</span>
                                 <button
                                     class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">Add
                                     to Cart</button>
@@ -429,17 +420,17 @@
 
                     <!-- Product 6 -->
                     <a href="product.html"
-                        class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                        class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                         <div>
                             <img src="./assets/products/6.png" alt="Gunpowder Green Tea"
                                 class="w-full h-48 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl heading-font font-bold text-primary-text mb-2">Gunpowder Green Tea</h3>
+                            <h3 class="text-xl font-serif font-bold text-primary-text mb-2">Gunpowder Green Tea</h3>
                             <p class="text-primary-text mb-4 text-sm">Tightly rolled pearls that unfurl when brewed,
                                 offering a robust flavor with smoky notes.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl heading-font font-bold text-accent">€7,25</span>
+                                <span class="text-2xl font-serif font-bold text-accent">€7,25</span>
                                 <button
                                     class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors">Add
                                     to Cart</button>
@@ -471,7 +462,7 @@
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
-                    <h3 class="text-2xl heading-font font-bold text-white mb-4">TEA<span class="text-white">FABLE</span>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-4">TEA<span class="text-white">FABLE</span>
                     </h3>
                     <p class="mb-4 max-w-md text-white">Discover the magical tale behind each of our carefully crafted
                         tea blends.

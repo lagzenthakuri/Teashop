@@ -11,71 +11,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
     <script src="./js/tailwind-config.js"></script>
-    <style>
-        /*
-|---------------------------------------------------------|
-|  CSS Styles for TeaFable Font Look                      |
-|---------------------------------------------------------|
-*/
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            /* Slightly larger body text for better readability */
-            line-height: 1.6;
-            color: #333;
-            /* Dark gray for text */
-        }
-
-        /* * Apply the bold, display font for the main heading 
- */
-        .heading-font {
-            font-family: 'Frank Ruhl Libre', serif;
-            font-weight: 700;
-            /* Makes it bold, like in your image */
-            font-size: 2.5rem;
-            /* Large size for emphasis */
-            margin-bottom: 0.5em;
-            color: #1a1a1a;
-        }
-
-        /* * Style for the italic quote text (using the body font) 
- */
-        .italic-quote {
-            font-style: italic;
-            font-weight: 500;
-            /* Medium weight, similar to the image */
-            margin-top: 2em;
-        }
-
-        .tea-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .tea-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .star-rating {
-            color: #fbbf24;
-        }
-
-        .size-option:checked+label {
-            background-color: #148837;
-            color: white;
-            border-color: #2b5f0d;
-        }
-    </style>
 </head>
 
 <body class="bg-primary-bg text-primary-text">
     <header class="bg-primary-bg text-primary-text py-6 px-4 sticky top-0 z-10 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl md:text-4xl heading-font font-bold">
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2">
                 TEA<span class="text-accent">SHOP</span>
             </h1>
 
@@ -110,7 +52,7 @@
                     </div>
                 </div>
 
-                <a href="#journey" class="hover:text-accent transition">Journey</a>
+                <a href="journey.html" class="hover:text-accent transition">Journey</a>
                 <a href="#contact" class="hover:text-accent transition">Contact</a>
 
                 <!-- Currency Selector -->
@@ -150,7 +92,7 @@
                 </ul>
             </details>
 
-            <a href="#journey" class="block py-2 hover:text-accent">Journey</a>
+            <a href="journey.html" class="block py-2 hover:text-accent">Journey</a>
             <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
 
             <!-- Mobile Currency Selector -->
@@ -170,7 +112,7 @@
         <div
             class="relative bg-white h-full w-full max-w-md transform transition-transform duration-300 translate-x-full overflow-y-auto">
             <div class="sticky top-0 bg-white p-6 border-b border-gray-200 flex justify-between items-center z-10">
-                <h2 class="text-xl heading-font font-bold text-primary-text">Your Cart</h2>
+                <h2 class="text-xl font-serif font-bold text-primary-text">Your Cart</h2>
                 <button class="text-2xl text-gray-500 hover:text-gray-700" id="closeCart">&times;</button>
             </div>
             <div class="p-6">
@@ -197,26 +139,35 @@
 
                 <div class="mb-6">
                     <h3 class="font-bold text-primary-text mb-3">Select Size</h3>
-                    <div class="grid grid-cols-2 gap-2 bg-accent">
-                        <input type="radio" name="cartSize" id="cartSize50g" class="hidden size-option" checked>
-                        <label for="cartSize50g"
-                            class="border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors">50g
-                            (Tin)</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <input type="radio" name="cartSize" id="cartSize50g" class="hidden size-option peer"
+                                checked>
+                            <label for="cartSize50g"
+                                class="block bg-white border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">50g
+                                (Tin)</label>
+                        </div>
 
-                        <input type="radio" name="cartSize" id="cartSize100g" class="hidden size-option">
-                        <label for="cartSize100g"
-                            class="border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors">100g
-                            (Bag)</label>
+                        <div>
+                            <input type="radio" name="cartSize" id="cartSize100g" class="hidden size-option peer">
+                            <label for="cartSize100g"
+                                class="block bg-white border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">100g
+                                (Bag)</label>
+                        </div>
 
-                        <input type="radio" name="cartSize" id="cartSize196g" class="hidden size-option">
-                        <label for="cartSize196g"
-                            class="border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors">196g
-                            (TH)</label>
+                        <div>
+                            <input type="radio" name="cartSize" id="cartSize196g" class="hidden size-option peer">
+                            <label for="cartSize196g"
+                                class="block bg-white border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">196g
+                                (TH)</label>
+                        </div>
 
-                        <input type="radio" name="cartSize" id="cartSize250g" class="hidden size-option">
-                        <label for="cartSize250g"
-                            class="border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors">250g
-                            (Bag)</label>
+                        <div>
+                            <input type="radio" name="cartSize" id="cartSize250g" class="hidden size-option peer">
+                            <label for="cartSize250g"
+                                class="block bg-white border border-secondary py-2 rounded-md text-sm text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">250g
+                                (Bag)</label>
+                        </div>
                     </div>
                 </div>
 
@@ -287,16 +238,19 @@
                     <img src="./assets/products/5.png" alt="Jasmine Dragon Pearls" class="w-full h-auto rounded-lg">
                 </div>
                 <!-- Thumbnail Gallery -->
-                <div class="flex space-x-4 mt-4">
-                    <div class="w-20 h-20 border border-secondary rounded-lg overflow-hidden cursor-pointer">
+                <div class="flex gap-4 mt-4">
+                    <div
+                        class="flex-1 h-32 border border-secondary rounded-lg overflow-hidden cursor-pointer hover:border-accent transition-colors">
                         <img src="./assets/products/2.png" alt="Jasmine Dragon Pearls"
                             class="w-full h-full object-cover">
                     </div>
-                    <div class="w-20 h-20 border border-secondary rounded-lg overflow-hidden cursor-pointer">
+                    <div
+                        class="flex-1 h-32 border border-secondary rounded-lg overflow-hidden cursor-pointer hover:border-accent transition-colors">
                         <img src="./assets/products/3.png" alt="Jasmine Dragon Pearls"
                             class="w-full h-full object-cover">
                     </div>
-                    <div class="w-20 h-20 border border-secondary rounded-lg overflow-hidden cursor-pointer">
+                    <div
+                        class="flex-1 h-32 border border-secondary rounded-lg overflow-hidden cursor-pointer hover:border-accent transition-colors">
                         <img src="./assets/products/4.png" alt="Jasmine Dragon Pearls"
                             class="w-full h-full object-cover">
                     </div>
@@ -305,13 +259,13 @@
 
             <!-- Product Details -->
             <div class="w-full lg:w-1/2">
-                <h1 class="text-4xl md:text-5xl heading-font font-bold text-primary-text mb-4">Jasmine Dragon Pearls
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-primary-text mb-4">Jasmine Dragon Pearls
                 </h1>
 
                 <!-- Price Section -->
                 <div class="mb-6">
                     <div class="flex items-center space-x-4 mb-2">
-                        <span class="text-3xl heading-font font-bold text-accent">€9,45 EUR</span>
+                        <span class="text-3xl font-serif font-bold text-accent">€9,45 EUR</span>
                         <span class="text-lg text-gray-500 line-through">€14,40 EUR</span>
                         <span class="bg-promo text-white px-2 py-1 rounded text-sm">Save 34%</span>
                     </div>
@@ -322,33 +276,41 @@
                 <div class="mb-6">
                     <h3 class="text-lg font-bold text-primary-text mb-3">Select Size</h3>
                     <div class="grid grid-cols-2 gap-2 mb-4">
-                        <input type="radio" name="size" id="size50g" class="hidden size-option" checked>
-                        <label for="size50g"
-                            class="border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors">
-                            <div class="font-medium">50g (Tin)</div>
-                            <div class="text-sm text-primary-text">€9,45</div>
-                        </label>
+                        <div>
+                            <input type="radio" name="size" id="size50g" class="hidden size-option peer" checked>
+                            <label for="size50g"
+                                class="block bg-white border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">
+                                <div class="font-medium">50g (Tin)</div>
+                                <div class="text-sm">€9,45</div>
+                            </label>
+                        </div>
 
-                        <input type="radio" name="size" id="size100g" class="hidden size-option">
-                        <label for="size100g"
-                            class="border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors">
-                            <div class="font-medium">100g (Bag)</div>
-                            <div class="text-sm text-primary-text">€16,90</div>
-                        </label>
+                        <div>
+                            <input type="radio" name="size" id="size100g" class="hidden size-option peer">
+                            <label for="size100g"
+                                class="block bg-white border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">
+                                <div class="font-medium">100g (Bag)</div>
+                                <div class="text-sm">€16,90</div>
+                            </label>
+                        </div>
 
-                        <input type="radio" name="size" id="size196g" class="hidden size-option">
-                        <label for="size196g"
-                            class="border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors">
-                            <div class="font-medium">196g (TH)</div>
-                            <div class="text-sm text-primary-text">€29,95</div>
-                        </label>
+                        <div>
+                            <input type="radio" name="size" id="size196g" class="hidden size-option peer">
+                            <label for="size196g"
+                                class="block bg-white border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">
+                                <div class="font-medium">196g (TH)</div>
+                                <div class="text-sm">€29,95</div>
+                            </label>
+                        </div>
 
-                        <input type="radio" name="size" id="size250g" class="hidden size-option">
-                        <label for="size250g"
-                            class="border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors">
-                            <div class="font-medium">250g (Bag)</div>
-                            <div class="text-sm text-primary-text">€35,80</div>
-                        </label>
+                        <div>
+                            <input type="radio" name="size" id="size250g" class="hidden size-option peer">
+                            <label for="size250g"
+                                class="block bg-white border border-secondary py-3 rounded-md text-center cursor-pointer hover:bg-secondary transition-colors peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">
+                                <div class="font-medium">250g (Bag)</div>
+                                <div class="text-sm">€35,80</div>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
@@ -390,7 +352,7 @@
 
                 <!-- Origin & Details -->
                 <div class="border-t border-gray-200 pt-6 mb-8">
-                    <h3 class="text-xl heading-font font-bold text-primary-text mb-4">Origin & Details</h3>
+                    <h3 class="text-xl font-serif font-bold text-primary-text mb-4">Origin & Details</h3>
                     <div class="grid grid-cols-2 gap-4 text-primary-text">
                         <div>
                             <strong class="text-primary-text">Type:</strong> Green Tea
@@ -409,7 +371,7 @@
 
                 <!-- How to Steep -->
                 <div class="border-t border-gray-200 pt-6 mb-8">
-                    <h3 class="text-xl heading-font font-bold text-primary-text mb-4">How to Steep</h3>
+                    <h3 class="text-xl font-serif font-bold text-primary-text mb-4">How to Steep</h3>
                     <div class="bg-secondary p-4 rounded-lg">
                         <p class="text-primary-text mb-2"><strong class="text-primary-text">Western Style:</strong> 3g /
                             200ml /
@@ -425,10 +387,11 @@
 
         <!-- How this tea is made -->
         <div class="border-t border-gray-200 pt-12 mb-12">
-            <h3 class="text-2xl heading-font font-bold text-primary-text mb-6">How are tea is made?</h3>
+            <h3 class="text-2xl font-serif font-bold text-primary-text mb-6">How are tea is made?</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <!-- Step 1 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/1.png" alt="Picking" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Picking</h4>
@@ -436,7 +399,8 @@
                     </div>
                 </div>
                 <!-- Step 2 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/2.png" alt="Withering" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Withering</h4>
@@ -444,7 +408,8 @@
                     </div>
                 </div>
                 <!-- Step 3 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/3.png" alt="Fixation" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Fixation</h4>
@@ -452,7 +417,8 @@
                     </div>
                 </div>
                 <!-- Step 4 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/4.png" alt="Rolling" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Rolling</h4>
@@ -460,7 +426,8 @@
                     </div>
                 </div>
                 <!-- Step 5 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/5.png" alt="Sun drying" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Sun drying</h4>
@@ -468,15 +435,18 @@
                     </div>
                 </div>
                 <!-- Step 6 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/6.png" alt="Fermentation" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Fermentation</h4>
-                        <p class="text-sm text-primary-text">The leaves are post-fermented in a controlled environment.</p>
+                        <p class="text-sm text-primary-text">The leaves are post-fermented in a controlled environment.
+                        </p>
                     </div>
                 </div>
                 <!-- Step 7 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/8.png" alt="Pressing" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Pressing</h4>
@@ -484,11 +454,13 @@
                     </div>
                 </div>
                 <!-- Step 8 -->
-                <div class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="bg-white border border-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="./assets/production/7.png" alt="Packaging" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="font-bold text-primary-text text-lg mb-2">Packaging</h4>
-                        <p class="text-sm text-primary-text">The compressed tea is wrapped in paper & packed in boxes.</p>
+                        <p class="text-sm text-primary-text">The compressed tea is wrapped in paper & packed in boxes.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -496,7 +468,7 @@
 
         <!-- Shipping & Returns -->
         <div class="border-t border-gray-200 pt-12 mb-12">
-            <h3 class="text-2xl heading-font font-bold text-primary-text mb-6">Shipping, Returns & Payment Methods</h3>
+            <h3 class="text-2xl font-serif font-bold text-primary-text mb-6">Shipping, Returns & Payment Methods</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-primary-text">
                 <div>
                     <h4 class="font-bold text-primary-text mb-2">Delivery Information</h4>
@@ -515,7 +487,7 @@
 
         <!-- Packaging Story -->
         <div class="bg-secondary rounded-2xl p-8 mb-12">
-            <h3 class="text-2xl heading-font font-bold text-primary-text mb-6">Our Packaging Story</h3>
+            <h3 class="text-2xl font-serif font-bold text-primary-text mb-6">Our Packaging Story</h3>
             <div class="flex flex-col lg:flex-row gap-8 items-center">
                 <div class="lg:w-1/3">
                     <img src="./assets/products/9.png" alt="Traditional Chinese Packaging Design"
@@ -544,14 +516,14 @@
 
         <!-- Customer Reviews -->
         <div class="mb-12">
-            <h3 class="text-2xl heading-font font-bold text-primary-text mb-6">Customer Reviews</h3>
+            <h3 class="text-2xl font-serif font-bold text-primary-text mb-6">Customer Reviews</h3>
 
             <!-- Rating Summary -->
             <div class="bg-primary-bg border border-secondary rounded-lg p-6 mb-8">
                 <div class="flex flex-col md:flex-row items-center justify-between">
                     <div class="text-center md:text-left mb-4 md:mb-0">
                         <div class="text-4xl font-bold text-primary-text mb-2">4.60</div>
-                        <div class="star-rating text-2xl mb-2">
+                        <div class="text-yellow-400 text-2xl mb-2">
                             ★★★★☆
                         </div>
                         <div class="text-primary-text">Based on 12 reviews</div>
@@ -568,7 +540,7 @@
                 <div class="bg-primary-bg border border-secondary rounded-lg p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
-                            <div class="star-rating text-lg mb-1">★★★★☆</div>
+                            <div class="text-yellow-400 text-lg mb-1">★★★★☆</div>
                             <div class="font-bold text-primary-text">Anonymous</div>
                         </div>
                         <span class="text-primary-text text-sm">2 weeks ago</span>
@@ -587,7 +559,7 @@
                 <div class="bg-primary-bg border border-secondary rounded-lg p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
-                            <div class="star-rating text-lg mb-1">★★★★★</div>
+                            <div class="text-yellow-400 text-lg mb-1">★★★★★</div>
                             <div class="font-bold text-primary-text">Nielsen Bull</div>
                         </div>
                         <span class="text-primary-text text-sm">09/05/2023</span>
@@ -602,20 +574,21 @@
 
         <!-- You May Also Like -->
         <div class="mb-12">
-            <h3 class="text-2xl heading-font font-bold text-primary-text mb-6">You May Also Like</h3>
+            <h3 class="text-2xl font-serif font-bold text-primary-text mb-6">You May Also Like</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Product 1 -->
-                <div class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                <div
+                    class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                     <div>
                         <img src="./assets/products/6.png" alt="Jasmine Tea Deluxe with Flowers"
                             class="w-full h-48 object-cover">
                     </div>
                     <div class="p-4">
-                        <h4 class="text-lg heading-font font-bold text-primary-text mb-2">Jasmine Tea Deluxe with
+                        <h4 class="text-lg font-serif font-bold text-primary-text mb-2">Jasmine Tea Deluxe with
                             Flowers
                         </h4>
                         <div class="flex justify-between items-center">
-                            <span class="text-xl heading-font font-bold text-accent">€8,50</span>
+                            <span class="text-xl font-serif font-bold text-accent">€8,50</span>
                             <button
                                 class="bg-accent text-white px-3 py-1 rounded-lg hover:bg-opacity-90 transition-colors text-sm add-to-cart-btn">Add</button>
                         </div>
@@ -623,15 +596,16 @@
                 </div>
 
                 <!-- Product 2 -->
-                <div class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                <div
+                    class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                     <div>
                         <img src="./assets/products/7.png" alt="White Chrysanthemum" class="w-full h-48 object-cover">
                     </div>
                     <div class="p-4">
-                        <h4 class="text-lg heading-font font-bold text-primary-text mb-2">White Chrysanthemum (Gong Ju)
+                        <h4 class="text-lg font-serif font-bold text-primary-text mb-2">White Chrysanthemum (Gong Ju)
                         </h4>
                         <div class="flex justify-between items-center">
-                            <span class="text-xl heading-font font-bold text-accent">€10,35</span>
+                            <span class="text-xl font-serif font-bold text-accent">€10,35</span>
                             <button
                                 class="bg-accent text-white px-3 py-1 rounded-lg hover:bg-opacity-90 transition-colors text-sm add-to-cart-btn">Add</button>
                         </div>
@@ -639,16 +613,17 @@
                 </div>
 
                 <!-- Product 3 -->
-                <div class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                <div
+                    class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                     <div>
                         <img src="./assets/products/9.png" alt="Oolong & Jasmine Gift Box"
                             class="w-full h-48 object-cover">
                     </div>
                     <div class="p-4">
-                        <h4 class="text-lg heading-font font-bold text-primary-text mb-2">Oolong & Jasmine Tea Gift Box
+                        <h4 class="text-lg font-serif font-bold text-primary-text mb-2">Oolong & Jasmine Tea Gift Box
                         </h4>
                         <div class="flex justify-between items-center">
-                            <span class="text-xl heading-font font-bold text-accent">€23,50</span>
+                            <span class="text-xl font-serif font-bold text-accent">€23,50</span>
                             <button
                                 class="bg-accent text-white px-3 py-1 rounded-lg hover:bg-opacity-90 transition-colors text-sm add-to-cart-btn">Add</button>
                         </div>
@@ -656,15 +631,16 @@
                 </div>
 
                 <!-- Product 4 -->
-                <div class="tea-card bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
+                <div
+                    class="transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary">
                     <div>
                         <img src="./assets/products/8.png" alt="Leaf Shaped Tea Strainer"
                             class="w-full h-48 object-cover">
                     </div>
                     <div class="p-4">
-                        <h4 class="text-lg heading-font font-bold text-primary-text mb-2">Leaf Shaped Tea Strainer</h4>
+                        <h4 class="text-lg font-serif font-bold text-primary-text mb-2">Leaf Shaped Tea Strainer</h4>
                         <div class="flex justify-between items-center">
-                            <span class="text-xl heading-font font-bold text-accent">€10,00</span>
+                            <span class="text-xl font-serif font-bold text-accent">€10,00</span>
                             <button
                                 class="bg-accent text-white px-3 py-1 rounded-lg hover:bg-opacity-90 transition-colors text-sm add-to-cart-btn">Add</button>
                         </div>
@@ -679,7 +655,7 @@
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
-                    <h3 class="text-2xl heading-font font-bold text-white mb-4">TEA<span class="text-white">FABLE</span>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-4">TEA<span class="text-white">FABLE</span>
                     </h3>
                     <p class="mb-4 max-w-md text-white">Discover the magical tale behind each of our carefully crafted
                         tea blends.
@@ -891,7 +867,7 @@
             sizeOptions.forEach(option => {
                 option.addEventListener('change', function () {
                     // Update price display if needed
-                        const sizeKey = this.id.replace('size', '').replace('g', '') + 'g';
+                    const sizeKey = this.id.replace('size', '').replace('g', '') + 'g';
                     const price = productPrices[sizeKey];
                     // You could update the main price display here if needed
                 });

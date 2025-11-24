@@ -8,34 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
     <script src="./js/tailwind-config.js"></script>
-    <style>
-        /* Custom styles if needed */
 
-        .faq-item {
-            transition: all 0.3s ease;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-    </style>
 </head>
 
 <body class="bg-primary-bg font-sans">
     <!-- Header -->
     <header class="bg-primary-bg text-primary-text py-6 px-4 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl md:text-4xl heading-font font-bold">
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2">
                 <a href="./index.html">TEA<span class="text-accent">SHOP</span></a>
             </h1>
 
@@ -70,6 +50,7 @@
                     </div>
                 </div>
 
+                <a href="journey.html" class="hover:text-accent transition">Journey</a>
                 <a href="#contact" class="hover:text-accent transition">Contact</a>
 
                 <!-- Currency Selector -->
@@ -112,6 +93,7 @@
             </details>
 
             <a href="./faq.html" class="block py-2 text-accent font-semibold">FAQ</a>
+            <a href="journey.html" class="block py-2 hover:text-accent">Journey</a>
             <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
 
             <!-- Mobile Currency Selector -->
@@ -130,7 +112,7 @@
     <!-- Hero Section -->
     <section class="bg-accent text-white py-16">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl heading-font font-bold mb-4">Frequently Asked Questions</h1>
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Frequently Asked Questions</h1>
             <p class="text-xl text-white max-w-2xl mx-auto">Find answers to common questions about our teas, shipping,
                 brewing, and more.</p>
         </div>
@@ -159,16 +141,18 @@
     <!-- General FAQ Section -->
     <section id="general-faq" class="py-16 px-4">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl heading-font font-bold text-center text-primary-text mb-12">General Questions</h2>
+            <h2 class="text-3xl font-serif font-bold text-center text-primary-text mb-12">General Questions</h2>
 
             <div class="space-y-6" id="faqContainer">
                 <!-- Question 1 -->
-                <div class="faq-item bg-white rounded-lg shadow border border-secondary p-6">
+                <div class="group bg-white rounded-lg shadow border border-secondary p-6 transition-all duration-300">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(1)">
                         <h3 class="text-xl font-semibold text-primary-text">1. How long does shipping take?</h3>
-                        <span class="faq-toggle text-accent text-xl transition-transform">▼</span>
+                        <span
+                            class="text-accent text-xl transition-transform duration-300 group-[.active]:rotate-180">▼</span>
                     </div>
-                    <div class="faq-answer mt-4">
+                    <div
+                        class="mt-4 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out group-[.active]:max-h-[500px]">
                         <p class="text-primary-text">We offer several shipping options:</p>
                         <ul class="mt-2 space-y-2 text-primary-text">
                             <li class="flex items-start">
@@ -185,12 +169,14 @@
                 </div>
 
                 <!-- Question 2 -->
-                <div class="faq-item bg-white rounded-lg shadow border border-secondary p-6">
+                <div class="group bg-white rounded-lg shadow border border-secondary p-6 transition-all duration-300">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(2)">
                         <h3 class="text-xl font-semibold text-primary-text">2. What is your return policy?</h3>
-                        <span class="faq-toggle text-accent text-xl transition-transform">▼</span>
+                        <span
+                            class="text-accent text-xl transition-transform duration-300 group-[.active]:rotate-180">▼</span>
                     </div>
-                    <div class="faq-answer mt-4">
+                    <div
+                        class="mt-4 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out group-[.active]:max-h-[500px]">
                         <p class="text-primary-text">We offer a 30-day satisfaction guarantee for all our teas.</p>
                     </div>
                 </div>
@@ -205,7 +191,7 @@
         <div class="container mx-auto max-w-6xl">
             <!-- Main Heading -->
             <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl heading-font font-bold text-primary-text mb-4">Green Tea 101</h2>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary-text mb-4">Green Tea 101</h2>
                 <p class="text-xl text-primary-text max-w-3xl mx-auto">Everything you need to know about the world's
                     most beloved tea</p>
             </div>
@@ -215,7 +201,7 @@
                 <!-- Left Column - Navigation -->
                 <div class="lg:col-span-1">
                     <div class="bg-white rounded-2xl shadow-lg border border-secondary p-6 sticky top-24">
-                        <h3 class="text-2xl heading-font font-bold text-primary-text mb-6">Explore Topics</h3>
+                        <h3 class="text-2xl font-serif font-bold text-primary-text mb-6">Explore Topics</h3>
                         <nav class="space-y-2">
                             <a href="#what-is-green-tea"
                                 class="flex items-center p-3 rounded-lg bg-secondary border border-secondary text-accent font-medium">
@@ -257,7 +243,7 @@
                     <section id="what-is-green-tea"
                         class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
                         <div class="bg-accent text-white p-6">
-                            <h2 class="text-3xl heading-font font-bold">What is Green Tea</h2>
+                            <h2 class="text-3xl font-serif font-bold">What is Green Tea</h2>
                             <p class="text-white mt-2">The essence of Chinese tea culture</p>
                         </div>
                         <div class="p-6">
@@ -295,7 +281,7 @@
                     <section id="benefits"
                         class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
                         <div class="border-b border-secondary p-6">
-                            <h2 class="text-2xl heading-font font-bold text-primary-text flex items-center">
+                            <h2 class="text-2xl font-serif font-bold text-primary-text flex items-center">
                                 <i class="fa fa-heart text-accent mr-3"></i>
                                 Health Benefits of Green Tea
                             </h2>
@@ -354,7 +340,7 @@
                     <section id="caffeine"
                         class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
                         <div class="border-b border-secondary p-6">
-                            <h2 class="text-2xl heading-font font-bold text-primary-text flex items-center">
+                            <h2 class="text-2xl font-serif font-bold text-primary-text flex items-center">
                                 <i class="fa fa-bolt text-accent mr-3"></i>
                                 Green Tea & Caffeine
                             </h2>
@@ -391,7 +377,7 @@
                     <section id="brewing-guide"
                         class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
                         <div class="border-b border-secondary p-6">
-                            <h2 class="text-2xl heading-font font-bold text-primary-text flex items-center">
+                            <h2 class="text-2xl font-serif font-bold text-primary-text flex items-center">
                                 <i class="fa fa-fire text-accent mr-3"></i>
                                 Perfect Brewing Guide
                             </h2>
@@ -448,7 +434,7 @@
     <!-- Contact CTA -->
     <div class="bg-white py-16 px-4">
         <div class="container mx-auto max-w-4xl text-center bg-secondary rounded-lg p-8">
-            <h2 class="text-2xl heading-font font-bold text-primary-text mb-4">Still have questions?</h2>
+            <h2 class="text-2xl font-serif font-bold text-primary-text mb-4">Still have questions?</h2>
             <p class="text-primary-text mb-6">Our tea experts are here to help you find the perfect tea and answer any
                 questions.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -469,7 +455,7 @@
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
-                    <h3 class="text-2xl heading-font font-bold text-white mb-4">TEA<span class="text-white">SHOP</span>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-4">TEA<span class="text-white">SHOP</span>
                     </h3>
                     <p class="mb-4 max-w-md text-white">Discover the magical tale behind each of our carefully crafted
                         tea blends.</p>
@@ -515,7 +501,7 @@
 
         // FAQ toggle functionality
         function toggleFAQ(number) {
-            const faqItem = document.querySelectorAll('.faq-item')[number - 1];
+            const faqItem = document.querySelectorAll('.group')[number - 1];
             faqItem.classList.toggle('active');
         }
 

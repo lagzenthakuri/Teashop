@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - TeaShop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
+    <script src="./js/tailwind-config.js"></script>
     <style>
-        .heading-font {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
+        /* Custom styles if needed */
+
         .faq-item {
             transition: all 0.3s ease;
         }
-        
+
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
         }
-        
+
         .faq-item.active .faq-answer {
             max-height: 500px;
         }
-        
+
         .faq-item.active .faq-toggle {
             transform: rotate(180deg);
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+
+<body class="bg-primary-bg font-sans">
     <!-- Header -->
-    <header class="bg-white text-gray-900 py-6 px-4 sticky top-0 z-50 shadow-md">
+    <header class="bg-primary-bg text-primary-text py-6 px-4 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl md:text-4xl heading-font font-bold">
-                <a href="./index.html">TEA<span class="text-red-500">SHOP</span></a>
+                <a href="./index.html">TEA<span class="text-accent">SHOP</span></a>
             </h1>
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="./index.html" class="hover:text-red-600 transition">Home</a>
+                <a href="./index.html" class="hover:text-accent transition">Home</a>
 
                 <!-- Our Teas Dropdown -->
                 <div class="relative group">
-                    <button class="hover:text-red-600 transition flex items-center gap-1">
+                    <button class="hover:text-accent transition flex items-center gap-1">
                         <a href="./collections.html"> Our Teas</a>
                         <span>▼</span>
                     </button>
 
                     <!-- Dropdown Menu -->
-                    <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+                    <div
+                        class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
                         <ul class="py-2">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Chinese Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Green Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Black Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Oolong Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">White Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Flower Tea</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Chinese Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Green Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Black Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Oolong Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">White Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Flower Tea</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <a href="#contact" class="hover:text-red-600 transition">Contact</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
 
                 <!-- Currency Selector -->
-                <select class="border border-red-300 px-2 py-1 rounded-md text-gray-700">
+                <select class="border border-secondary px-2 py-1 rounded-md text-primary-text">
                     <option value="usd">🇺🇸 USD</option>
                     <option value="eur">🇪🇺 EUR</option>
                     <option value="gbp">🇬🇧 GBP</option>
@@ -77,8 +85,10 @@
 
             <!-- Right Buttons -->
             <div class="flex space-x-3">
-                <button class="hover:text-red-600 transition">Join Us</button>
-                <button class="bg-red-600 border border-red-700 p-2 text-white rounded-lg hover:bg-red-700 transition">Order Now</button>
+                <button class="hover:text-accent transition">Join Us</button>
+                <button
+                    class="bg-accent border border-accent p-2 text-white rounded-lg hover:bg-opacity-90 transition">Order
+                    Now</button>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -87,26 +97,26 @@
 
         <!-- Mobile Dropdown Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg mt-4 p-4">
-            <a href="./index.html" class="block py-2 hover:text-red-600">Home</a>
+            <a href="./index.html" class="block py-2 hover:text-accent">Home</a>
 
             <details class="py-2">
                 <summary class="cursor-pointer font-medium"> <a href="./collections.html">Our Teas</a></summary>
                 <ul class="pl-4 mt-2 space-y-1">
-                    <li><a href="#" class="block py-1 hover:text-red-600">Chinese Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Green Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Black Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Oolong Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">White Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Flower Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Chinese Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Green Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Black Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Oolong Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">White Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Flower Tea</a></li>
                 </ul>
             </details>
 
-            <a href="./faq.html" class="block py-2 text-red-600 font-semibold">FAQ</a>
-            <a href="#contact" class="block py-2 hover:text-red-600">Contact</a>
+            <a href="./faq.html" class="block py-2 text-accent font-semibold">FAQ</a>
+            <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
 
             <!-- Mobile Currency Selector -->
             <label class="block mt-2 text-sm font-medium">Country / Currency</label>
-            <select class="border border-red-300 px-2 py-1 rounded-md text-gray-700">
+            <select class="border border-secondary px-2 py-1 rounded-md text-primary-text">
                 <option value="usd">🇺🇸 USD</option>
                 <option value="eur">🇪🇺 EUR</option>
                 <option value="gbp">🇬🇧 GBP</option>
@@ -118,10 +128,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-red-800 text-white py-16">
+    <section class="bg-accent text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl heading-font font-bold mb-4">Frequently Asked Questions</h1>
-            <p class="text-xl text-red-100 max-w-2xl mx-auto">Find answers to common questions about our teas, shipping, brewing, and more.</p>
+            <p class="text-xl text-white max-w-2xl mx-auto">Find answers to common questions about our teas, shipping,
+                brewing, and more.</p>
         </div>
     </section>
 
@@ -129,10 +140,18 @@
     <section class="bg-white border-b py-6">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#general-faq" class="bg-red-600 text-white px-6 py-2 rounded-full font-medium transition hover:bg-red-700">General FAQ</a>
-                <a href="#green-tea-guide" class="bg-white border border-red-300 text-red-600 px-6 py-2 rounded-full font-medium transition hover:bg-red-50">Green Tea Guide</a>
-                <a href="#shipping-info" class="bg-white border border-red-300 text-red-600 px-6 py-2 rounded-full font-medium transition hover:bg-red-50">Shipping Info</a>
-                <a href="#brewing-guide" class="bg-white border border-red-300 text-red-600 px-6 py-2 rounded-full font-medium transition hover:bg-red-50">Brewing Guide</a>
+                <a href="#general-faq"
+                    class="bg-accent text-white px-6 py-2 rounded-full font-medium transition hover:bg-opacity-90">General
+                    FAQ</a>
+                <a href="#green-tea-guide"
+                    class="bg-white border border-secondary text-accent px-6 py-2 rounded-full font-medium transition hover:bg-secondary">Green
+                    Tea Guide</a>
+                <a href="#shipping-info"
+                    class="bg-white border border-secondary text-accent px-6 py-2 rounded-full font-medium transition hover:bg-secondary">Shipping
+                    Info</a>
+                <a href="#brewing-guide"
+                    class="bg-white border border-secondary text-accent px-6 py-2 rounded-full font-medium transition hover:bg-secondary">Brewing
+                    Guide</a>
             </div>
         </div>
     </section>
@@ -140,24 +159,25 @@
     <!-- General FAQ Section -->
     <section id="general-faq" class="py-16 px-4">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl heading-font font-bold text-center text-gray-900 mb-12">General Questions</h2>
-            
+            <h2 class="text-3xl heading-font font-bold text-center text-primary-text mb-12">General Questions</h2>
+
             <div class="space-y-6" id="faqContainer">
                 <!-- Question 1 -->
-                <div class="faq-item bg-white rounded-lg shadow border p-6">
+                <div class="faq-item bg-white rounded-lg shadow border border-secondary p-6">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(1)">
-                        <h3 class="text-xl font-semibold text-gray-900">1. How long does shipping take?</h3>
-                        <span class="faq-toggle text-red-600 text-xl transition-transform">▼</span>
+                        <h3 class="text-xl font-semibold text-primary-text">1. How long does shipping take?</h3>
+                        <span class="faq-toggle text-accent text-xl transition-transform">▼</span>
                     </div>
                     <div class="faq-answer mt-4">
-                        <p class="text-gray-600">We offer several shipping options:</p>
-                        <ul class="mt-2 space-y-2 text-gray-600">
+                        <p class="text-primary-text">We offer several shipping options:</p>
+                        <ul class="mt-2 space-y-2 text-primary-text">
                             <li class="flex items-start">
-                                <i class="fa fa-truck text-red-500 mt-1 mr-2"></i>
-                                <span><strong>Standard Shipping:</strong> 3-5 business days (Free on orders over €30)</span>
+                                <i class="fa fa-truck text-accent mt-1 mr-2"></i>
+                                <span><strong>Standard Shipping:</strong> 3-5 business days (Free on orders over
+                                    €30)</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa fa-shipping-fast text-red-500 mt-1 mr-2"></i>
+                                <i class="fa fa-shipping-fast text-accent mt-1 mr-2"></i>
                                 <span><strong>Express Shipping:</strong> 1-2 business days (€4.99)</span>
                             </li>
                         </ul>
@@ -165,13 +185,13 @@
                 </div>
 
                 <!-- Question 2 -->
-                <div class="faq-item bg-white rounded-lg shadow border p-6">
+                <div class="faq-item bg-white rounded-lg shadow border border-secondary p-6">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(2)">
-                        <h3 class="text-xl font-semibold text-gray-900">2. What is your return policy?</h3>
-                        <span class="faq-toggle text-red-600 text-xl transition-transform">▼</span>
+                        <h3 class="text-xl font-semibold text-primary-text">2. What is your return policy?</h3>
+                        <span class="faq-toggle text-accent text-xl transition-transform">▼</span>
                     </div>
                     <div class="faq-answer mt-4">
-                        <p class="text-gray-600">We offer a 30-day satisfaction guarantee for all our teas.</p>
+                        <p class="text-primary-text">We offer a 30-day satisfaction guarantee for all our teas.</p>
                     </div>
                 </div>
 
@@ -181,43 +201,50 @@
     </section>
 
     <!-- Green Tea 101 Section -->
-    <section id="green-tea-guide" class="py-16 px-4 bg-gray-50">
+    <section id="green-tea-guide" class="py-16 px-4 bg-primary-bg">
         <div class="container mx-auto max-w-6xl">
             <!-- Main Heading -->
             <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl heading-font font-bold text-gray-900 mb-4">Green Tea 101</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about the world's most beloved tea</p>
+                <h2 class="text-4xl md:text-5xl heading-font font-bold text-primary-text mb-4">Green Tea 101</h2>
+                <p class="text-xl text-primary-text max-w-3xl mx-auto">Everything you need to know about the world's
+                    most beloved tea</p>
             </div>
 
             <!-- Two Column Layout -->
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Left Column - Navigation -->
                 <div class="lg:col-span-1">
-                    <div class="bg-white rounded-2xl shadow-lg border border-red-100 p-6 sticky top-24">
-                        <h3 class="text-2xl heading-font font-bold text-gray-900 mb-6">Explore Topics</h3>
+                    <div class="bg-white rounded-2xl shadow-lg border border-secondary p-6 sticky top-24">
+                        <h3 class="text-2xl heading-font font-bold text-primary-text mb-6">Explore Topics</h3>
                         <nav class="space-y-2">
-                            <a href="#what-is-green-tea" class="flex items-center p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 font-medium">
-                                <i class="fa fa-leaf mr-3 text-red-600"></i>
+                            <a href="#what-is-green-tea"
+                                class="flex items-center p-3 rounded-lg bg-secondary border border-secondary text-accent font-medium">
+                                <i class="fa fa-leaf mr-3 text-accent"></i>
                                 What is Green Tea
                             </a>
-                            <a href="#benefits" class="flex items-center p-3 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-200 text-gray-700 transition">
-                                <i class="fa fa-heart mr-3 text-gray-500"></i>
+                            <a href="#benefits"
+                                class="flex items-center p-3 rounded-lg hover:bg-secondary border border-transparent hover:border-secondary text-primary-text transition">
+                                <i class="fa fa-heart mr-3 text-primary-text"></i>
                                 Health Benefits
                             </a>
-                            <a href="#caffeine" class="flex items-center p-3 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-200 text-gray-700 transition">
-                                <i class="fa fa-bolt mr-3 text-gray-500"></i>
+                            <a href="#caffeine"
+                                class="flex items-center p-3 rounded-lg hover:bg-secondary border border-transparent hover:border-secondary text-primary-text transition">
+                                <i class="fa fa-bolt mr-3 text-primary-text"></i>
                                 Caffeine Content
                             </a>
-                            <a href="#brewing-guide" class="flex items-center p-3 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-200 text-gray-700 transition">
-                                <i class="fa fa-fire mr-3 text-gray-500"></i>
+                            <a href="#brewing-guide"
+                                class="flex items-center p-3 rounded-lg hover:bg-secondary border border-transparent hover:border-secondary text-primary-text transition">
+                                <i class="fa fa-fire mr-3 text-primary-text"></i>
                                 Brewing Guide
                             </a>
-                            <a href="#buying" class="flex items-center p-3 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-200 text-gray-700 transition">
-                                <i class="fa fa-shopping-bag mr-3 text-gray-500"></i>
+                            <a href="#buying"
+                                class="flex items-center p-3 rounded-lg hover:bg-secondary border border-transparent hover:border-secondary text-primary-text transition">
+                                <i class="fa fa-shopping-bag mr-3 text-primary-text"></i>
                                 Where to Buy
                             </a>
-                            <a href="#types" class="flex items-center p-3 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-200 text-gray-700 transition">
-                                <i class="fa fa-list mr-3 text-gray-500"></i>
+                            <a href="#types"
+                                class="flex items-center p-3 rounded-lg hover:bg-secondary border border-transparent hover:border-secondary text-primary-text transition">
+                                <i class="fa fa-list mr-3 text-primary-text"></i>
                                 Tea Types & Regions
                             </a>
                         </nav>
@@ -227,30 +254,35 @@
                 <!-- Right Column - Content -->
                 <div class="lg:col-span-2 space-y-8">
                     <!-- What is Green Tea Section -->
-                    <section id="what-is-green-tea" class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden">
-                        <div class="bg-red-600 text-white p-6">
+                    <section id="what-is-green-tea"
+                        class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
+                        <div class="bg-accent text-white p-6">
                             <h2 class="text-3xl heading-font font-bold">What is Green Tea</h2>
-                            <p class="text-red-100 mt-2">The essence of Chinese tea culture</p>
+                            <p class="text-white mt-2">The essence of Chinese tea culture</p>
                         </div>
                         <div class="p-6">
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-3">The Art of Green Tea</h3>
-                                    <p class="text-gray-600">Green tea is the most natural form of tea, made from Camellia sinensis leaves that undergo minimal oxidation. Unlike black tea, green tea is pan-fired or steamed shortly after harvesting to prevent oxidation, preserving its delicate flavors, natural antioxidants, and vibrant green color.</p>
+                                    <h3 class="text-xl font-semibold text-primary-text mb-3">The Art of Green Tea</h3>
+                                    <p class="text-primary-text">Green tea is the most natural form of tea, made from
+                                        Camellia sinensis leaves that undergo minimal oxidation. Unlike black tea, green
+                                        tea is pan-fired or steamed shortly after harvesting to prevent oxidation,
+                                        preserving its delicate flavors, natural antioxidants, and vibrant green color.
+                                    </p>
                                 </div>
-                                <div class="bg-red-50 rounded-lg p-4">
-                                    <h4 class="font-semibold text-red-800 mb-2">Key Characteristics</h4>
-                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                <div class="bg-secondary rounded-lg p-4">
+                                    <h4 class="font-semibold text-accent mb-2">Key Characteristics</h4>
+                                    <ul class="text-primary-text space-y-1 text-sm">
                                         <li class="flex items-center">
-                                            <i class="fa fa-check text-red-600 mr-2"></i>
+                                            <i class="fa fa-check text-accent mr-2"></i>
                                             Minimal oxidation process
                                         </li>
                                         <li class="flex items-center">
-                                            <i class="fa fa-check text-red-600 mr-2"></i>
+                                            <i class="fa fa-check text-accent mr-2"></i>
                                             Light, delicate flavor profile
                                         </li>
                                         <li class="flex items-center">
-                                            <i class="fa fa-check text-red-600 mr-2"></i>
+                                            <i class="fa fa-check text-accent mr-2"></i>
                                             High in antioxidants (EGCG)
                                         </li>
                                     </ul>
@@ -260,10 +292,11 @@
                     </section>
 
                     <!-- Benefits Section -->
-                    <section id="benefits" class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden">
-                        <div class="border-b border-gray-200 p-6">
-                            <h2 class="text-2xl heading-font font-bold text-gray-900 flex items-center">
-                                <i class="fa fa-heart text-red-600 mr-3"></i>
+                    <section id="benefits"
+                        class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
+                        <div class="border-b border-secondary p-6">
+                            <h2 class="text-2xl heading-font font-bold text-primary-text flex items-center">
+                                <i class="fa fa-heart text-accent mr-3"></i>
                                 Health Benefits of Green Tea
                             </h2>
                         </div>
@@ -275,8 +308,9 @@
                                             <i class="fa fa-brain text-green-600 text-lg"></i>
                                         </div>
                                         <div>
-                                            <h4 class="font-semibold text-gray-900">Mental Clarity</h4>
-                                            <p class="text-sm text-gray-600">L-theanine promotes relaxation while improving focus.</p>
+                                            <h4 class="font-semibold text-primary-text">Mental Clarity</h4>
+                                            <p class="text-sm text-primary-text">L-theanine promotes relaxation while
+                                                improving focus.</p>
                                         </div>
                                     </div>
                                     <div class="flex items-start">
@@ -284,8 +318,9 @@
                                             <i class="fa fa-shield-alt text-blue-600 text-lg"></i>
                                         </div>
                                         <div>
-                                            <h4 class="font-semibold text-gray-900">Antioxidant Power</h4>
-                                            <p class="text-sm text-gray-600">Rich in catechins that combat oxidative stress.</p>
+                                            <h4 class="font-semibold text-primary-text">Antioxidant Power</h4>
+                                            <p class="text-sm text-primary-text">Rich in catechins that combat oxidative
+                                                stress.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -295,17 +330,19 @@
                                             <i class="fa fa-fire text-purple-600 text-lg"></i>
                                         </div>
                                         <div>
-                                            <h4 class="font-semibold text-gray-900">Metabolism Boost</h4>
-                                            <p class="text-sm text-gray-600">Can enhance metabolic rate and support weight management.</p>
+                                            <h4 class="font-semibold text-primary-text">Metabolism Boost</h4>
+                                            <p class="text-sm text-primary-text">Can enhance metabolic rate and support
+                                                weight management.</p>
                                         </div>
                                     </div>
                                     <div class="flex items-start">
-                                        <div class="bg-red-100 p-2 rounded-lg mr-4">
-                                            <i class="fa fa-heartbeat text-red-600 text-lg"></i>
+                                        <div class="bg-secondary p-2 rounded-lg mr-4">
+                                            <i class="fa fa-heartbeat text-accent text-lg"></i>
                                         </div>
                                         <div>
-                                            <h4 class="font-semibold text-gray-900">Heart Health</h4>
-                                            <p class="text-sm text-gray-600">Supports cardiovascular function and healthy cholesterol.</p>
+                                            <h4 class="font-semibold text-primary-text">Heart Health</h4>
+                                            <p class="text-sm text-primary-text">Supports cardiovascular function and
+                                                healthy cholesterol.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -314,34 +351,36 @@
                     </section>
 
                     <!-- Caffeine Section -->
-                    <section id="caffeine" class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden">
-                        <div class="border-b border-gray-200 p-6">
-                            <h2 class="text-2xl heading-font font-bold text-gray-900 flex items-center">
-                                <i class="fa fa-bolt text-red-600 mr-3"></i>
+                    <section id="caffeine"
+                        class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
+                        <div class="border-b border-secondary p-6">
+                            <h2 class="text-2xl heading-font font-bold text-primary-text flex items-center">
+                                <i class="fa fa-bolt text-accent mr-3"></i>
                                 Green Tea & Caffeine
                             </h2>
                         </div>
                         <div class="p-6">
-                            <div class="bg-red-50 rounded-lg p-6 mb-6">
-                                <h3 class="font-semibold text-red-800 text-lg mb-3">Gentle Energy, No Jitters</h3>
-                                <p class="text-gray-700">Green tea contains less caffeine than coffee but provides a smoother, more sustained energy boost without the crash.</p>
+                            <div class="bg-secondary rounded-lg p-6 mb-6">
+                                <h3 class="font-semibold text-accent text-lg mb-3">Gentle Energy, No Jitters</h3>
+                                <p class="text-primary-text">Green tea contains less caffeine than coffee but provides a
+                                    smoother, more sustained energy boost without the crash.</p>
                             </div>
-                            
+
                             <div class="grid md:grid-cols-3 gap-4 text-center">
-                                <div class="bg-white border border-gray-200 rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-red-600 mb-2">20-45mg</div>
-                                    <div class="text-sm text-gray-600">Per 8oz cup</div>
-                                    <div class="text-xs text-gray-500 mt-1">Green Tea</div>
+                                <div class="bg-white border border-secondary rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-accent mb-2">20-45mg</div>
+                                    <div class="text-sm text-primary-text">Per 8oz cup</div>
+                                    <div class="text-xs text-primary-text mt-1">Green Tea</div>
                                 </div>
-                                <div class="bg-white border border-gray-200 rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-gray-600 mb-2">95mg</div>
-                                    <div class="text-sm text-gray-600">Per 8oz cup</div>
-                                    <div class="text-xs text-gray-500 mt-1">Coffee</div>
+                                <div class="bg-white border border-secondary rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-primary-text mb-2">95mg</div>
+                                    <div class="text-sm text-primary-text">Per 8oz cup</div>
+                                    <div class="text-xs text-primary-text mt-1">Coffee</div>
                                 </div>
-                                <div class="bg-white border border-gray-200 rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-gray-600 mb-2">40-70mg</div>
-                                    <div class="text-sm text-gray-600">Per 8oz cup</div>
-                                    <div class="text-xs text-gray-500 mt-1">Black Tea</div>
+                                <div class="bg-white border border-secondary rounded-lg p-4">
+                                    <div class="text-2xl font-bold text-primary-text mb-2">40-70mg</div>
+                                    <div class="text-sm text-primary-text">Per 8oz cup</div>
+                                    <div class="text-xs text-primary-text mt-1">Black Tea</div>
                                 </div>
                             </div>
                         </div>
@@ -349,43 +388,50 @@
 
                     <!-- Continue with other sections (Brewing Guide, Where to Buy, Tea Types) -->
                     <!-- Brewing Guide Section -->
-                    <section id="brewing-guide" class="bg-white rounded-2xl shadow-lg border border-red-100 overflow-hidden">
-                        <div class="border-b border-gray-200 p-6">
-                            <h2 class="text-2xl heading-font font-bold text-gray-900 flex items-center">
-                                <i class="fa fa-fire text-red-600 mr-3"></i>
+                    <section id="brewing-guide"
+                        class="bg-white rounded-2xl shadow-lg border border-secondary overflow-hidden">
+                        <div class="border-b border-secondary p-6">
+                            <h2 class="text-2xl heading-font font-bold text-primary-text flex items-center">
+                                <i class="fa fa-fire text-accent mr-3"></i>
                                 Perfect Brewing Guide
                             </h2>
                         </div>
                         <div class="p-6">
                             <div class="grid md:grid-cols-2 gap-8">
                                 <div>
-                                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Step-by-Step Brewing</h3>
+                                    <h3 class="text-lg font-semibold text-primary-text mb-4">Step-by-Step Brewing</h3>
                                     <div class="space-y-4">
                                         <div class="flex items-start">
-                                            <div class="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">1</div>
+                                            <div
+                                                class="bg-accent text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">
+                                                1</div>
                                             <div>
-                                                <p class="font-medium text-gray-900">Water Temperature</p>
-                                                <p class="text-sm text-gray-600">Heat water to 70-80°C (160-175°F). Never use boiling water.</p>
+                                                <p class="font-medium text-primary-text">Water Temperature</p>
+                                                <p class="text-sm text-primary-text">Heat water to 70-80°C (160-175°F).
+                                                    Never use boiling water.</p>
                                             </div>
                                         </div>
                                         <div class="flex items-start">
-                                            <div class="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">2</div>
+                                            <div
+                                                class="bg-accent text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">
+                                                2</div>
                                             <div>
-                                                <p class="font-medium text-gray-900">Measure Tea</p>
-                                                <p class="text-sm text-gray-600">Use 1 teaspoon (2-3g) of tea leaves per 200ml of water.</p>
+                                                <p class="font-medium text-primary-text">Measure Tea</p>
+                                                <p class="text-sm text-primary-text">Use 1 teaspoon (2-3g) of tea leaves
+                                                    per 200ml of water.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-red-50 rounded-lg p-6">
-                                    <h4 class="font-semibold text-red-800 mb-3">Pro Tips</h4>
-                                    <ul class="space-y-2 text-sm text-gray-700">
+                                <div class="bg-secondary rounded-lg p-6">
+                                    <h4 class="font-semibold text-accent mb-3">Pro Tips</h4>
+                                    <ul class="space-y-2 text-sm text-primary-text">
                                         <li class="flex items-start">
-                                            <i class="fa fa-star text-red-600 mr-2 mt-1"></i>
+                                            <i class="fa fa-star text-accent mr-2 mt-1"></i>
                                             <span>Use filtered water for best flavor</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <i class="fa fa-star text-red-600 mr-2 mt-1"></i>
+                                            <i class="fa fa-star text-accent mr-2 mt-1"></i>
                                             <span>Pre-warm your teapot or cup</span>
                                         </li>
                                     </ul>
@@ -401,14 +447,17 @@
 
     <!-- Contact CTA -->
     <div class="bg-white py-16 px-4">
-        <div class="container mx-auto max-w-4xl text-center bg-red-50 rounded-lg p-8">
-            <h2 class="text-2xl heading-font font-bold text-gray-900 mb-4">Still have questions?</h2>
-            <p class="text-gray-600 mb-6">Our tea experts are here to help you find the perfect tea and answer any questions.</p>
+        <div class="container mx-auto max-w-4xl text-center bg-secondary rounded-lg p-8">
+            <h2 class="text-2xl heading-font font-bold text-primary-text mb-4">Still have questions?</h2>
+            <p class="text-primary-text mb-6">Our tea experts are here to help you find the perfect tea and answer any
+                questions.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:hello@teashop.com" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                <a href="mailto:hello@teashop.com"
+                    class="bg-accent hover:bg-opacity-90 text-white px-6 py-3 rounded-lg font-medium transition">
                     <i class="fa fa-envelope mr-2"></i>Email Us
                 </a>
-                <a href="tel:+442012345678" class="border border-red-600 text-red-600 hover:bg-red-50 px-6 py-3 rounded-lg font-medium transition">
+                <a href="tel:+442012345678"
+                    class="border border-accent text-accent hover:bg-secondary px-6 py-3 rounded-lg font-medium transition">
                     <i class="fa fa-phone mr-2"></i>Call Us
                 </a>
             </div>
@@ -416,17 +465,19 @@
     </div>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-red-900 text-red-200 py-12 px-4">
+    <footer id="contact" class="bg-accent text-white py-12 px-4">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
-                    <h3 class="text-2xl heading-font font-bold text-white mb-4">TEA<span class="text-red-300">SHOP</span></h3>
-                    <p class="mb-4 max-w-md text-red-100">Discover the magical tale behind each of our carefully crafted tea blends.</p>
+                    <h3 class="text-2xl heading-font font-bold text-white mb-4">TEA<span class="text-white">SHOP</span>
+                    </h3>
+                    <p class="mb-4 max-w-md text-white">Discover the magical tale behind each of our carefully crafted
+                        tea blends.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#" class="text-white hover:text-secondary transition-colors" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Instagram">
+                        <a href="#" class="text-white hover:text-secondary transition-colors" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -434,14 +485,15 @@
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="./faq.html" class="text-red-200 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="./collections.html" class="text-red-200 hover:text-white transition-colors">Tea Collections</a></li>
-                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="./faq.html" class="text-white hover:text-secondary transition-colors">FAQ</a></li>
+                        <li><a href="./collections.html" class="text-white hover:text-secondary transition-colors">Tea
+                                Collections</a></li>
+                        <li><a href="#" class="text-white hover:text-secondary transition-colors">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-red-200">
+                    <ul class="space-y-2 text-white">
                         <li>123 Tea Garden Lane</li>
                         <li>London, UK</li>
                         <li>hello@teashop.com</li>
@@ -449,7 +501,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-red-800 mt-8 pt-8 text-sm text-center text-red-300">
+            <div class="border-t border-white mt-8 pt-8 text-sm text-center text-white">
                 <p>&copy; <span id="year"></span> TeaShop. All rights reserved.</p>
             </div>
         </div>
@@ -482,10 +534,10 @@
         });
 
         // Update active navigation based on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.sticky nav a');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 100;
@@ -495,11 +547,11 @@
             });
 
             navLinks.forEach(link => {
-                link.classList.remove('bg-red-50', 'border-red-200', 'text-red-700');
-                link.classList.add('hover:bg-gray-50', 'border-transparent', 'text-gray-700');
+                link.classList.remove('bg-secondary', 'border-secondary', 'text-accent');
+                link.classList.add('hover:bg-secondary', 'border-transparent', 'text-primary-text');
                 if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('bg-red-50', 'border-red-200', 'text-red-700');
-                    link.classList.remove('hover:bg-gray-50', 'border-transparent', 'text-gray-700');
+                    link.classList.add('bg-secondary', 'border-secondary', 'text-accent');
+                    link.classList.remove('hover:bg-secondary', 'border-transparent', 'text-primary-text');
                 }
             });
         });
@@ -508,4 +560,5 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>

@@ -8,9 +8,19 @@
     src: url("fonts/JetBrainsMono-Regular.woff2");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&display=swap');
+
 :root {
-    font-family: "JetBrains Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-weight: 300;
+    --primary-color: #5D4037;
+    /* Accent */
+    --secondary-color: #F5F5F5;
+    /* Secondary */
+    --text-color: #1a1a1a;
+    /* Primary Text */
+    --bg-color: #FFFFFF;
+    /* Primary BG */
     color: rgba(255, 255, 255, 0.87);
     background-color: #000000;
     text-align: center;
@@ -128,12 +138,10 @@ button {
 }
 
 button:hover {
-    background-image: radial-gradient(
-            farthest-corner at 77% 83%,
+    background-image: radial-gradient(farthest-corner at 77% 83%,
             rgba(1, 197, 245, 0.5) 2%,
             rgba(1, 126, 254, 0.5) 28%,
-            rgba(25, 25, 28, 0) 70%
-    );
+            rgba(25, 25, 28, 0) 70%);
     border: 1px solid rgba(76, 166, 255, 0.2);
     background-clip: padding-box;
 }

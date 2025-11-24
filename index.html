@@ -1,61 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeaFable - The Magical Tale Behind TeaFable's Brew</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'heading': ['Cormorant Garamond', 'serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <script src="./js/tailwind-config.js"></script>
 </head>
 
-<body class="bg-gray-50 font-sans">
+<body class="bg-primary-bg font-sans text-primary-text">
     <!-- Header -->
-    <header class="bg-white text-gray-900 py-6 px-4 sticky top-0 z-50 shadow-md">
+    <header class="bg-primary-bg text-primary-text py-6 px-4 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl md:text-4xl font-heading font-bold">
-                TEA<span class="text-red-500">SHOP</span>
+                TEA<span class="text-accent">SHOP</span>
             </h1>
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="./index.html" class="hover:text-red-600 transition">Home</a>
+                <a href="./index.html" class="hover:text-accent transition">Home</a>
 
                 <!-- Our Teas Dropdown -->
                 <div class="relative group">
-                    <button class="hover:text-red-600 transition flex items-center gap-1">
+                    <button class="hover:text-accent transition flex items-center gap-1">
                         <a href="./collections.html"> Our Teas</a>
                         <span>▼</span>
                     </button>
 
                     <!-- Dropdown Menu -->
-                    <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+                    <div
+                        class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
                         <ul class="py-2">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Chinese Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Green Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Black Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Oolong Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">White Tea</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-red-50 text-gray-700">Flower Tea</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Chinese Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Green Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Black Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Oolong Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">White Tea</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Flower Tea</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <a href="#journey" class="hover:text-red-600 transition">Journey</a>
-                <a href="contact.html" class="hover:text-red-600 transition">Contact</a>
+                <a href="#journey" class="hover:text-accent transition">Journey</a>
+                <a href="contact.html" class="hover:text-accent transition">Contact</a>
 
                 <!-- Currency Selector -->
-                <select class="border border-red-300 px-2 py-1 rounded-md text-gray-700">
+                <select class="border border-secondary px-2 py-1 rounded-md text-primary-text">
                     <option value="usd">🇺🇸 USD</option>
                     <option value="eur">🇪🇺 EUR</option>
                     <option value="gbp">🇬🇧 GBP</option>
@@ -67,8 +65,10 @@
 
             <!-- Right Buttons -->
             <div class="flex space-x-3">
-                <button class="hover:text-red-600 transition">Join Us</button>
-                <button class="bg-red-600 border border-red-700 p-2 text-white rounded-lg hover:bg-red-700 transition order-now-btn">Order Now</button>
+                <button class="hover:text-accent transition">Join Us</button>
+                <button
+                    class="bg-accent border border-accent p-2 text-white rounded-lg hover:bg-opacity-90 transition order-now-btn">Order
+                    Now</button>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -77,26 +77,26 @@
 
         <!-- Mobile Dropdown Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg mt-4 p-4">
-            <a href="./index.html" class="block py-2 hover:text-red-600">Home</a>
+            <a href="./index.html" class="block py-2 hover:text-accent">Home</a>
 
             <details class="py-2">
                 <summary class="cursor-pointer font-medium"> <a href="./collections.html">Our Teas</a></summary>
                 <ul class="pl-4 mt-2 space-y-1">
-                    <li><a href="#" class="block py-1 hover:text-red-600">Chinese Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Green Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Black Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Oolong Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">White Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-red-600">Flower Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Chinese Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Green Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Black Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Oolong Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">White Tea</a></li>
+                    <li><a href="#" class="block py-1 hover:text-accent">Flower Tea</a></li>
                 </ul>
             </details>
 
-            <a href="#journey" class="block py-2 hover:text-red-600">Journey</a>
-            <a href="#contact" class="block py-2 hover:text-red-600">Contact</a>
+            <a href="#journey" class="block py-2 hover:text-accent">Journey</a>
+            <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
 
             <!-- Mobile Currency Selector -->
             <label class="block mt-2 text-sm font-medium">Country / Currency</label>
-            <select class="border border-red-300 px-2 py-1 rounded-md text-gray-700">
+            <select class="border border-secondary px-2 py-1 rounded-md text-primary-text">
                 <option value="usd">🇺🇸 USD</option>
                 <option value="eur">🇪🇺 EUR</option>
                 <option value="gbp">🇬🇧 GBP</option>
@@ -108,58 +108,77 @@
     </header>
 
     <!-- Cart Popup -->
-<div class="fixed inset-0 z-50 flex justify-end opacity-0 invisible transition-opacity duration-300" id="cartPopup">
-    <div class="fixed inset-0 bg-black bg-opacity-50" id="cartBackdrop"></div>
-    <div class="relative bg-white h-full w-full max-w-md transform transition-transform duration-300 translate-x-full overflow-y-auto">
-        <div class="sticky top-0 bg-white p-6 border-b border-gray-200 flex justify-between items-center z-10">
-            <h2 class="text-xl font-heading font-bold text-gray-900">Your Cart</h2>
-            <button class="text-2xl text-gray-500 hover:text-gray-700" id="closeCart">&times;</button>
-        </div>
-        <div class="p-6">
-            <div class="flex mb-6 pb-6 border-b border-gray-100">
-                <img src="./assets/products/6.png" alt="Bi Luo Chun Green Tea" class="w-20 h-20 object-cover rounded-lg mr-4">
-                <div class="flex-1">
-                    <h3 class="font-bold text-gray-900">Bi Luo Chun Green Tea</h3>
-                    <p class="text-gray-600 text-sm">Select: 70g</p>
-                    <div class="flex justify-between items-center mt-2">
-                        <span class="text-red-700 font-bold">€12,15</span>
-                        <div class="flex items-center">
-                            <button class="w-8 h-8 rounded-full border border-red-600 bg-white text-red-600 flex items-center justify-center decrease-btn">-</button>
-                            <input type="text" class="w-10 text-center mx-2 border border-gray-300 rounded" value="1" readonly>
-                            <button class="w-8 h-8 rounded-full border border-red-600 bg-white text-red-600 flex items-center justify-center increase-btn">+</button>
+    <div class="fixed inset-0 z-50 flex justify-end opacity-0 invisible transition-opacity duration-300" id="cartPopup">
+        <div class="fixed inset-0 bg-black bg-opacity-50" id="cartBackdrop"></div>
+        <div
+            class="relative bg-white h-full w-full max-w-md transform transition-transform duration-300 translate-x-full overflow-y-auto">
+            <div class="sticky top-0 bg-white p-6 border-b border-gray-200 flex justify-between items-center z-10">
+                <h2 class="text-xl font-heading font-bold text-primary-text">Your Cart</h2>
+                <button class="text-2xl text-gray-500 hover:text-gray-700" id="closeCart">&times;</button>
+            </div>
+            <div class="p-6">
+                <div class="flex mb-6 pb-6 border-b border-gray-100">
+                    <img src="./assets/products/6.png" alt="Bi Luo Chun Green Tea"
+                        class="w-20 h-20 object-cover rounded-lg mr-4">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-primary-text">Bi Luo Chun Green Tea</h3>
+                        <p class="text-primary-text text-sm">Select: 70g</p>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-accent font-bold">€12,15</span>
+                            <div class="flex items-center">
+                                <button
+                                    class="w-8 h-8 rounded-full border border-accent bg-white text-accent flex items-center justify-center decrease-btn">-</button>
+                                <input type="text" class="w-10 text-center mx-2 border border-secondary rounded"
+                                    value="1" readonly>
+                                <button
+                                    class="w-8 h-8 rounded-full border border-accent bg-white text-accent flex items-center justify-center increase-btn">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="mb-6">
-                <h3 class="font-bold text-gray-900 mb-3">Select Size</h3>
-                <div class="grid grid-cols-3 gap-2">
-                    <button class="border border-red-300 py-2 rounded-md text-sm hover:bg-red-50 transition-colors">20g</button>
-                    <button class="border border-red-300 py-2 rounded-md text-sm hover:bg-red-50 transition-colors">1g (sample)</button>
-                    <button class="border border-red-300 py-2 rounded-md text-sm hover:bg-red-50 transition-colors">80g (tin)</button>
-                    <button class="border border-red-300 py-2 rounded-md text-sm hover:bg-red-50 transition-colors">300g (10% OFF)</button>
-                    <button class="border border-red-300 py-2 rounded-md text-sm hover:bg-red-50 transition-colors">1kg (20% OFF)</button>
+
+                <div class="mb-6">
+                    <h3 class="font-bold text-primary-text mb-3">Select Size</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button
+                            class="border border-secondary py-2 rounded-md text-sm hover:bg-secondary transition-colors">20g</button>
+                        <button
+                            class="border border-secondary py-2 rounded-md text-sm hover:bg-secondary transition-colors">1g
+                            (sample)</button>
+                        <button
+                            class="border border-secondary py-2 rounded-md text-sm hover:bg-secondary transition-colors">80g
+                            (tin)</button>
+                        <button
+                            class="border border-secondary py-2 rounded-md text-sm hover:bg-secondary transition-colors">300g
+                            (10% OFF)</button>
+                        <button
+                            class="border border-secondary py-2 rounded-md text-sm hover:bg-secondary transition-colors">1kg
+                            (20% OFF)</button>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-bold text-primary-text mb-2">Estimated total</h3>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold">€12,15 EUR</span>
+                        <span class="text-sm text-gray-600">Taxes included</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">Discounts and shipping calculated at checkout.</p>
                 </div>
             </div>
-            
-            <div class="mb-6">
-                <h3 class="font-bold text-gray-900 mb-2">Estimated total</h3>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-bold">€12,15 EUR</span>
-                    <span class="text-sm text-gray-600">Taxes included</span>
-                </div>
-                <p class="text-sm text-gray-600 mt-1">Discounts and shipping calculated at checkout.</p>
+            <div class="sticky bottom-0 bg-white p-6 border-t border-gray-200">
+                <button
+                    class="w-full bg-accent text-white py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors">Check
+                    out</button>
+                <button
+                    class="w-full border border-accent text-accent py-3 rounded-lg font-medium hover:bg-secondary transition-colors mt-3">Continue
+                    Shopping</button>
             </div>
-        </div>
-        <div class="sticky bottom-0 bg-white p-6 border-t border-gray-200">
-            <button class="w-full bg-red-700 text-white py-3 rounded-lg font-medium hover:bg-red-800 transition-colors">Check out</button>
-            <button class="w-full border border-red-700 text-red-700 py-3 rounded-lg font-medium hover:bg-red-50 transition-colors mt-3">Continue Shopping</button>
         </div>
     </div>
-</div>
     <!-- HERO SECTION -->
-    <section id="home" class="relative py-20 md:py-36 px-4 text-white bg-cover bg-center" style="background-image: url('./assets/banner/8.png');">
+    <section id="home" class="relative py-20 md:py-36 px-4 text-white bg-cover bg-center"
+        style="background-image: url('./assets/banner/8.png');">
         <div class="container mx-auto text-center max-w-3xl">
             <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
                 The Magical Tale Behind TeaFable's Brew
@@ -171,13 +190,14 @@
 
             <!-- Buttons -->
             <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-                <button class="bg-white text-red-700 px-8 py-3 rounded-full font-medium hover:bg-red-50 transition shadow-lg w-full md:w-auto">
+                <button
+                    class="bg-white text-accent px-8 py-3 rounded-full font-medium hover:bg-secondary transition shadow-lg w-full md:w-auto">
                     Explore Our Teas
                 </button>
 
                 <button class="border-2 border-white backdrop-blur-sm bg-white/30 text-white 
                px-8 py-3 rounded-full font-medium w-full md:w-auto
-               hover:bg-white hover:text-red-700 transition">
+               hover:bg-white hover:text-accent transition">
                     Our Story
                 </button>
             </div>
@@ -187,7 +207,7 @@
         <!-- No overlap on mobile. Overlap only on md+ -->
         <div class="w-[95%] sm:w-[92%] md:w-[90%] mx-auto mt-10
            md:absolute md:left-1/2 md:-translate-x-1/2 md:-bottom-28">
-            <div id="tea-cards-containers" class="bg-white border border-red-300 rounded-2xl shadow-xl p-4 sm:p-6
+            <div id="tea-cards-containers" class="bg-primary-bg border border-secondary rounded-2xl shadow-xl p-4 sm:p-6
              grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
         </div>
     </section>
@@ -197,16 +217,19 @@
     <!-- Tea Collections Section - REDESIGNED -->
     <section id="teas" class="py-16 px-4">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-gray-900 mb-4">Our Tea Collections
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-primary-text mb-4">Our Tea
+                Collections
             </h2>
-            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">Explore our premium selection of teas,
+            <p class="text-lg text-primary-text text-center mb-12 max-w-2xl mx-auto">Explore our premium selection of
+                teas,
                 carefully sourced and crafted for the perfect cup.</p>
 
             <!-- Best Sellers Section -->
             <div class="mb-16">
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900">Best Sellers</h3>
-                    <a href="collections.html" class="text-red-700 hover:text-red-900 font-medium flex items-center gap-2">
+                    <h3 class="text-2xl font-heading font-bold text-primary-text">Best Sellers</h3>
+                    <a href="collections.html"
+                        class="text-accent hover:text-primary-text font-medium flex items-center gap-2">
                         See More
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -214,7 +237,8 @@
                         </svg>
                     </a>
                 </div>
-                <p class="text-gray-600 mb-6">Our most loved teas, chosen by customers worldwide for their exceptional
+                <p class="text-primary-text mb-6">Our most loved teas, chosen by customers worldwide for their
+                    exceptional
                     quality and taste.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="best-sellers-container"></div>
             </div>
@@ -222,8 +246,9 @@
             <!-- New Arrivals Section -->
             <div class="mb-16">
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900">New Arrivals</h3>
-                    <a href="collections.html" class="text-red-700 hover:text-red-900 font-medium flex items-center gap-2">
+                    <h3 class="text-2xl font-heading font-bold text-primary-text">New Arrivals</h3>
+                    <a href="collections.html"
+                        class="text-accent hover:text-primary-text font-medium flex items-center gap-2">
                         See More
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -231,7 +256,8 @@
                         </svg>
                     </a>
                 </div>
-                <p class="text-gray-600 mb-6">Discover the latest additions to our collection, fresh from the finest tea
+                <p class="text-primary-text mb-6">Discover the latest additions to our collection, fresh from the finest
+                    tea
                     gardens.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="new-arrivals-container"></div>
             </div>
@@ -239,8 +265,9 @@
             <!-- Discount Rates Section -->
             <div>
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-heading font-bold text-gray-900">Special Discounts</h3>
-                    <a href="collections.html" class="text-red-700 hover:text-red-900 font-medium flex items-center gap-2">
+                    <h3 class="text-2xl font-heading font-bold text-primary-text">Special Discounts</h3>
+                    <a href="collections.html"
+                        class="text-accent hover:text-primary-text font-medium flex items-center gap-2">
                         See More
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -248,143 +275,159 @@
                         </svg>
                     </a>
                 </div>
-                <p class="text-gray-600 mb-6">Limited time offers on premium teas. Stock up on your favorites while
+                <p class="text-primary-text mb-6">Limited time offers on premium teas. Stock up on your favorites while
                     supplies last!</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="discount-container"></div>
             </div>
         </div>
     </section>
-    
+
     <!-- Testimonials -->
-     <div class="py-5 bg-white">
-    <div class="container flex flex-col items-center justify-center w-full p-6 mx-auto text-center xl:px-0">
-        <div class="text-sm font-bold tracking-wider text-red-600 uppercase">Customer Reviews</div>
-        <h2 class="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-900 lg:leading-tight lg:text-4xl">
-            What Tea Lovers Say About Us
-        </h2>
-        <p class="max-w-2xl py-4 text-lg leading-normal text-gray-600 lg:text-xl xl:text-xl">
-            Real stories from people who enjoy our freshly brewed teas every day. Their words inspire us to craft the perfect cup.
-        </p>
-    </div>
+    <div class="py-5 bg-primary-bg">
+        <div class="container flex flex-col items-center justify-center w-full p-6 mx-auto text-center xl:px-0">
+            <div class="text-sm font-bold tracking-wider text-accent uppercase">Customer Reviews</div>
+            <h2
+                class="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-primary-text lg:leading-tight lg:text-4xl">
+                What Tea Lovers Say About Us
+            </h2>
+            <p class="max-w-2xl py-4 text-lg leading-normal text-primary-text lg:text-xl xl:text-xl">
+                Real stories from people who enjoy our freshly brewed teas every day. Their words inspire us to craft
+                the perfect cup.
+            </p>
+        </div>
 
-    <div class="container p-6 mx-auto mb-10 xl:px-0">
-        <div class="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
+        <div class="container p-6 mx-auto mb-10 xl:px-0">
+            <div class="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
 
-            <!-- BIG CARD -->
-            <div class="lg:col-span-2 xl:col-auto">
-                <div class="flex flex-col justify-between w-full h-full px-6 py-6 bg-red-50 md:px-14 rounded-2xl md:py-14">
-                    <p class="text-2xl leading-normal text-gray-900">
-                        "The <mark class="mx-1 text-red-800 bg-red-100 rounded-md ring-red-100 ring-4">
-                        Thai Milk Tea</mark> is honestly the best I've had. Smooth, creamy, and perfectly balanced. It has become my daily refreshment!"
-                    </p>
-                    <div class="flex items-center mt-8 space-x-3">
-                        <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                            <img alt="Avatar of Aarati Shrestha" src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&fit=crop&w=100&h=100&q=80" loading="lazy" />
-                        </div>
-                        <div>
-                            <div class="text-lg font-medium text-gray-900">Aarati Shrestha</div>
-                            <div class="text-gray-600">Regular Customer</div>
+                <!-- BIG CARD -->
+                <div class="lg:col-span-2 xl:col-auto">
+                    <div
+                        class="flex flex-col justify-between w-full h-full px-6 py-6 bg-secondary md:px-14 rounded-2xl md:py-14">
+                        <p class="text-2xl leading-normal text-primary-text">
+                            "The <mark class="mx-1 text-accent bg-secondary rounded-md ring-secondary ring-4">
+                                Thai Milk Tea</mark> is honestly the best I've had. Smooth, creamy, and perfectly
+                            balanced. It has become my daily refreshment!"
+                        </p>
+                        <div class="flex items-center mt-8 space-x-3">
+                            <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                                <img alt="Avatar of Aarati Shrestha"
+                                    src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&fit=crop&w=100&h=100&q=80"
+                                    loading="lazy" />
+                            </div>
+                            <div>
+                                <div class="text-lg font-medium text-primary-text">Aarati Shrestha</div>
+                                <div class="text-primary-text">Regular Customer</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- CARD 2 -->
-            <div>
-                <div class="flex flex-col justify-between w-full h-full px-6 py-6 bg-red-50 md:px-14 rounded-2xl md:py-14">
-                    <p class="text-2xl leading-normal text-gray-900">
-                        "Their <mark class="mx-1 text-red-800 bg-red-100 rounded-md ring-red-100 ring-4">
-                        Bubble Tea</mark> is refreshing and not overly sweet. The pearls are soft and fresh — exactly how bubble tea should be!"
-                    </p>
-                    <div class="flex items-center mt-8 space-x-3">
-                        <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                            <img alt="Avatar of Sanjay Karki" src="https://images.unsplash.com/photo-1463453091185-61582044d556?crop=faces&fit=crop&w=100&h=100&q=80" loading="lazy" />
-                        </div>
-                        <div>
-                            <div class="text-lg font-medium text-gray-900">Sanjay Karki</div>
-                            <div class="text-gray-600">Tea Enthusiast</div>
+                <!-- CARD 2 -->
+                <div>
+                    <div
+                        class="flex flex-col justify-between w-full h-full px-6 py-6 bg-secondary md:px-14 rounded-2xl md:py-14">
+                        <p class="text-2xl leading-normal text-primary-text">
+                            "Their <mark class="mx-1 text-accent bg-secondary rounded-md ring-secondary ring-4">
+                                Bubble Tea</mark> is refreshing and not overly sweet. The pearls are soft and fresh —
+                            exactly how bubble tea should be!"
+                        </p>
+                        <div class="flex items-center mt-8 space-x-3">
+                            <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                                <img alt="Avatar of Sanjay Karki"
+                                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?crop=faces&fit=crop&w=100&h=100&q=80"
+                                    loading="lazy" />
+                            </div>
+                            <div>
+                                <div class="text-lg font-medium text-primary-text">Sanjay Karki</div>
+                                <div class="text-primary-text">Tea Enthusiast</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- CARD 3 -->
-            <div>
-                <div class="flex flex-col justify-between w-full h-full px-6 py-6 bg-red-50 md:px-14 rounded-2xl md:py-14">
-                    <p class="text-2xl leading-normal text-gray-900">
-                        "I love how fresh and aromatic their teas are. The <mark class="mx-1 text-red-800 bg-red-100 rounded-md ring-red-100 ring-4">
-                        herbal blends</mark> are perfect for relaxing after a long day."
-                    </p>
-                    <div class="flex items-center mt-8 space-x-3">
-                        <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                            <img alt="Avatar of Mina Lama" src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?crop=faces&fit=crop&w=100&h=100&q=80" loading="lazy" />
-                        </div>
-                        <div>
-                            <div class="text-lg font-medium text-gray-900">Mina Lama</div>
-                            <div class="text-gray-600">Wellness Blogger</div>
+                <!-- CARD 3 -->
+                <div>
+                    <div
+                        class="flex flex-col justify-between w-full h-full px-6 py-6 bg-secondary md:px-14 rounded-2xl md:py-14">
+                        <p class="text-2xl leading-normal text-primary-text">
+                            "I love how fresh and aromatic their teas are. The <mark
+                                class="mx-1 text-accent bg-secondary rounded-md ring-secondary ring-4">
+                                herbal blends</mark> are perfect for relaxing after a long day."
+                        </p>
+                        <div class="flex items-center mt-8 space-x-3">
+                            <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
+                                <img alt="Avatar of Mina Lama"
+                                    src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?crop=faces&fit=crop&w=100&h=100&q=80"
+                                    loading="lazy" />
+                            </div>
+                            <div>
+                                <div class="text-lg font-medium text-primary-text">Mina Lama</div>
+                                <div class="text-primary-text">Wellness Blogger</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-</div>
 
-    
+
     <!--Magic Journey Section -->
     <section id="journey" class="py-16 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row md:justify-between text-center md:text-left gap-6 mb-10">
-            <h2 class="text-3xl md:text-5xl font-heading font-bold text-gray-900">
+        <div
+            class="container mx-auto flex flex-col md:flex-row md:justify-between text-center md:text-left gap-6 mb-10">
+            <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary-text">
                 Be a Part of TeaFable's Magic Journey
             </h2>
 
             <div class="w-full md:w-96 mx-auto md:mx-0">
-                <p class="text-lg text-gray-600 mb-6">
+                <p class="text-lg text-primary-text mb-6">
                     Join our community of tea lovers and experience the magic in every cup.
                 </p>
                 <div class="flex items-center justify-center md:justify-start gap-3">
-                    <button class="bg-red-800 text-white hover:bg-red-600 rounded-lg px-4 py-2 transition">
+                    <button class="bg-accent text-white hover:bg-opacity-90 rounded-lg px-4 py-2 transition">
                         I'm Interested
                     </button>
-                    <button class="border border-red-600 text-red-700 rounded-lg px-4 py-2 hover:bg-red-50 transition">
+                    <button class="border border-accent text-accent rounded-lg px-4 py-2 hover:bg-secondary transition">
                         Learn more
                     </button>
                 </div>
             </div>
-        </div>         
+        </div>
 
         <!-- Features + Image -->
         <div class="flex flex-col lg:flex-row items-center justify-center gap-6">
 
             <!-- Left Features -->
             <div class="flex flex-col items-center">
-                <div class="border border-red-200 p-4 space m-2 rounded-lg w-64 text-center bg-red-50">
-                    <i class="fa-solid fa-award text-4xl text-red-700 mb-2"></i>
-                    <h2 class="font-bold text-2xl text-gray-900">Brand Recognition</h2>
-                    <p class="text-gray-600">Gain some brand recognitions</p>
+                <div class="border border-secondary p-4 space m-2 rounded-lg w-64 text-center bg-secondary">
+                    <i class="fa-solid fa-award text-4xl text-accent mb-2"></i>
+                    <h2 class="font-bold text-2xl text-primary-text">Brand Recognition</h2>
+                    <p class="text-primary-text">Gain some brand recognitions</p>
                 </div>
-                <div class="border border-red-200 p-4 m-2 rounded-lg w-64 text-center bg-red-50">
-                    <i class="fa-solid fa-user text-4xl text-red-700 mb-2"></i>
-                    <h2 class="font-bold text-2xl text-gray-900">Exclusive Recipes</h2>
-                    <p class="text-gray-600">Access exclusive recipes to make tea</p>
+                <div class="border border-secondary p-4 m-2 rounded-lg w-64 text-center bg-secondary">
+                    <i class="fa-solid fa-user text-4xl text-accent mb-2"></i>
+                    <h2 class="font-bold text-2xl text-primary-text">Exclusive Recipes</h2>
+                    <p class="text-primary-text">Access exclusive recipes to make tea</p>
                 </div>
             </div>
 
             <!-- Middle Image -->
-            <img src="./assets/products/tealeaves.png" alt="Tea Leaves" class="h-72 md:h-96 rounded-xl object-contain" />
+            <img src="./assets/products/tealeaves.png" alt="Tea Leaves"
+                class="h-72 md:h-96 rounded-xl object-contain" />
 
             <!-- Right Features -->
             <div class="flex flex-col items-center">
-                <div class="border border-red-200 p-4 m-2 rounded-lg w-64 text-center bg-red-50">
-                    <i class="fa-solid fa-headset text-4xl text-red-700 mb-2"></i>
-                    <h2 class="font-bold text-2xl text-gray-900">Ongoing Support</h2>
-                    <p class="text-gray-600">Receive continuous support from staff</p>
+                <div class="border border-secondary p-4 m-2 rounded-lg w-64 text-center bg-secondary">
+                    <i class="fa-solid fa-headset text-4xl text-accent mb-2"></i>
+                    <h2 class="font-bold text-2xl text-primary-text">Ongoing Support</h2>
+                    <p class="text-primary-text">Receive continuous support from staff</p>
                 </div>
-                <div class="border border-red-200 p-4 m-2 rounded-lg w-64 text-center bg-red-50">
-                    <i class="fa-solid fa-chart-line text-4xl text-red-700 mb-2"></i>
-                    <h2 class="font-bold text-2xl text-gray-900">Proven Success</h2>
-                    <p class="text-gray-600">A proven tea business</p>
+                <div class="border border-secondary p-4 m-2 rounded-lg w-64 text-center bg-secondary">
+                    <i class="fa-solid fa-chart-line text-4xl text-accent mb-2"></i>
+                    <h2 class="font-bold text-2xl text-primary-text">Proven Success</h2>
+                    <p class="text-primary-text">A proven tea business</p>
                 </div>
             </div>
 
@@ -392,86 +435,82 @@
     </section>
 
 
-<!-- Refresh Section - Fixed -->
-<section class="py-16 px-4 bg-white relative z-10">
-    <div class="container mx-auto max-w-6xl">
+    <!-- Refresh Section - Fixed -->
+    <section class="py-16 px-4 bg-primary-bg relative z-10">
+        <div class="container mx-auto max-w-6xl">
 
-        <!-- Outer Card -->
-        <div class="relative bg-white border border-red-300 rounded-3xl 
+            <!-- Outer Card -->
+            <div class="relative bg-primary-bg border border-secondary rounded-3xl 
                     flex flex-col md:flex-row items-center
                     px-4 md:px-8 py-12 md:py-16 lg:py-20 overflow-hidden">
 
-            <!-- Background image that extends beyond container - Hidden on mobile -->
-            <div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full overflow-hidden rounded-r-3xl">
-                <img 
-                    src="./assets/wizard.png"
-                    alt="Wizard"
-                    class="h-full w-auto object-contain object-right"
-                />
-            </div>
-
-            <!-- LEFT TEXT -->
-            <div class="flex-1 text-center md:text-left  z-10 relative">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                    Refresh Your Day! <br />
-                    <span class="text-gray-900">Savor the Taste</span>
-                </h2>
-
-                <p class="text-gray-600 text-lg md:text-xl mt-4 max-w-lg mx-auto md:mx-0">
-                    Indulge in our signature drinks crafted to perfection. 
-                    Thai Tea and Bubble Tea await to brighten your day.
-                </p>
-
-                <!-- BUTTONS -->
-                <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
-                    <button class="bg-red-700 text-white px-8 py-3 rounded-full font-medium hover:bg-red-800 transition order-now-btn">
-                        Order now
-                    </button>
-
-                    <button class="border border-red-700 text-red-700 px-8 py-3 rounded-full font-medium hover:bg-red-50 transition">
-                        Join franchise
-                    </button>
+                <!-- Background image that extends beyond container - Hidden on mobile -->
+                <div
+                    class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full overflow-hidden rounded-r-3xl">
+                    <img src="./assets/wizard.png" alt="Wizard" class="h-full w-auto object-contain object-right" />
                 </div>
-            </div>
 
-            <!-- MOBILE IMAGE - Only shown on mobile -->
-            <div class="md:hidden mt-10 w-full flex justify-center">
-                <img 
-                    src="./assets/wizard.png"
-                    alt="Wizard"
-                    class="h-56 sm:h-64 object-contain"
-                />
-            </div>
+                <!-- LEFT TEXT -->
+                <div class="flex-1 text-center md:text-left  z-10 relative">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-primary-text leading-tight">
+                        Refresh Your Day! <br />
+                        <span class="text-primary-text">Savor the Taste</span>
+                    </h2>
 
+                    <p class="text-primary-text text-lg md:text-xl mt-4 max-w-lg mx-auto md:mx-0">
+                        Indulge in our signature drinks crafted to perfection.
+                        Thai Tea and Bubble Tea await to brighten your day.
+                    </p>
+
+                    <!-- BUTTONS -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+                        <button
+                            class="bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition order-now-btn">
+                            Order now
+                        </button>
+
+                        <button
+                            class="border border-accent text-accent px-8 py-3 rounded-full font-medium hover:bg-secondary transition">
+                            Join franchise
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MOBILE IMAGE - Only shown on mobile -->
+                <div class="md:hidden mt-10 w-full flex justify-center">
+                    <img src="./assets/wizard.png" alt="Wizard" class="h-56 sm:h-64 object-contain" />
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-red-900 text-red-200 py-12 px-4">
+    <footer id="contact" class="bg-accent text-white py-12 px-4">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
-                    <h3 class="text-2xl font-heading font-bold text-white mb-4">TEA<span
-                            class="text-red-300">FABLE</span></h3>
-                    <p class="mb-4 max-w-md text-red-100">Discover the magical tale behind each of our carefully crafted tea blends.
+                    <h3 class="text-2xl font-heading font-bold text-white mb-4">TEA<span class="text-white">FABLE</span>
+                    </h3>
+                    <p class="mb-4 max-w-md text-white">Discover the magical tale behind each of our carefully crafted
+                        tea blends.
                         Join us on a journey of flavor, tradition, and enchantment.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#" class="text-white hover:text-secondary transition-colors" aria-label="Facebook">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <path
                                     d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
                             </svg>
                         </a>
-                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Instagram">
+                        <a href="#" class="text-white hover:text-secondary transition-colors" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="#" class="text-red-200 hover:text-white transition-colors" aria-label="Twitter">
+                        <a href="#" class="text-white hover:text-secondary transition-colors" aria-label="Twitter">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <path
@@ -483,15 +522,16 @@
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Our Story</a></li>
-                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Tea Collections</a></li>
-                        <li><a href="faq.html" class="text-red-200 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#" class="text-red-200 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-white hover:text-secondary transition-colors">Our Story</a></li>
+                        <li><a href="#" class="text-white hover:text-secondary transition-colors">Tea Collections</a>
+                        </li>
+                        <li><a href="faq.html" class="text-white hover:text-secondary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-white hover:text-secondary transition-colors">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-red-200">
+                    <ul class="space-y-2 text-white">
                         <li>123 Tea Garden Lane</li>
                         <li>London, UK</li>
                         <li>hello@teafable.com</li>
@@ -499,7 +539,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-red-800 mt-8 pt-8 text-sm text-center text-red-300">
+            <div class="border-t border-white mt-8 pt-8 text-sm text-center text-white">
                 <p>&copy; 2023 TeaFable. All rights reserved.</p>
             </div>
         </div>
@@ -551,7 +591,7 @@
                 teas.forEach(tea => {
                     const card = document.createElement("div");
                     card.className =
-                        "bg-white rounded-xl overflow-hidden shadow-md border border-gray-200";
+                        "bg-primary-bg rounded-xl overflow-hidden shadow-md border border-secondary";
 
                     card.innerHTML = `
                     <a href="product.html">
@@ -559,17 +599,17 @@
     <img 
         src="${tea.url}" 
         alt="${tea.name}"
-        class="h-40 w-full sm:w-auto bg-red-200 object-cover rounded-lg"
+        class="h-40 w-full sm:w-auto bg-secondary object-cover rounded-lg"
     />
 
     <div class="p-5">
         <div class="flex justify-between items-start mb-2">
-            <h3 class="text-lg font-bold text-gray-900">
+            <h3 class="text-lg font-bold text-primary-text">
                 ${tea.name}
             </h3>
         </div>
 
-        <p class="text-gray-600">
+        <p class="text-primary-text">
             ${tea.description}
         </p>
     </div>
@@ -694,18 +734,18 @@
         // Function to create tea card HTML
         function createTeaCard(tea) {
             return `
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div class="bg-primary-bg rounded-2xl overflow-hidden shadow-md border border-secondary transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <a href="product.html">
                         <img src="${tea.url}" alt="${tea.name}" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-xl font-heading font-bold text-gray-900">${tea.name}</h3>
-                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm capitalize">${tea.type} Tea</span>
+                                <h3 class="text-xl font-heading font-bold text-primary-text">${tea.name}</h3>
+                                <span class="px-3 py-1 bg-secondary text-accent rounded-full text-sm capitalize">${tea.type} Tea</span>
                             </div>
-                            <p class="text-gray-600 mb-4">${tea.description}</p>
+                            <p class="text-primary-text mb-4">${tea.description}</p>
                             <div class="flex justify-between items-center mt-6">
-                                <span class="text-2xl font-heading font-bold text-red-700">${tea.price}</span>
-                                <button class="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors add-to-cart-btn">Add to Cart</button>
+                                <span class="text-2xl font-heading font-bold text-accent">${tea.price}</span>
+                                <button class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors add-to-cart-btn">Add to Cart</button>
                             </div>
                         </div>
                     </a>
@@ -740,74 +780,75 @@
 
     <script>
         // Cart popup functionality
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("hidden");
-}
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("hidden");
+        }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const cartPopup = document.getElementById('cartPopup');
-    const cartBackdrop = document.getElementById('cartBackdrop');
-    const closeCartBtn = document.getElementById('closeCart');
-    const orderNowBtns = document.querySelectorAll('.order-now-btn');
-    const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
-    
-    // Function to open cart popup
-    function openCartPopup() {
-        cartPopup.classList.remove('invisible', 'opacity-0');
-        cartPopup.classList.add('opacity-100');
-        cartPopup.querySelector('.transform').classList.remove('translate-x-full');
-        document.body.classList.add('overflow-hidden');
-    }
-    
-    // Function to close cart popup
-    function closeCartPopup() {
-        cartPopup.classList.add('invisible', 'opacity-0');
-        cartPopup.classList.remove('opacity-100');
-        cartPopup.querySelector('.transform').classList.add('translate-x-full');
-        document.body.classList.remove('overflow-hidden');
-    }
-    
-    // Event listeners for opening cart
-    orderNowBtns.forEach(btn => {
-        btn.addEventListener('click', openCartPopup);
-    });
-    
-    // Add to cart buttons
-    addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', openCartPopup);
-    });
-    
-    // Event listener for closing cart
-    if (closeCartBtn) {
-        closeCartBtn.addEventListener('click', closeCartPopup);
-    }
-    
-    // Close cart when clicking on backdrop
-    if (cartBackdrop) {
-        cartBackdrop.addEventListener('click', closeCartPopup);
-    }
-    
-    // Quantity buttons functionality
-    const decreaseBtns = document.querySelectorAll('.decrease-btn');
-    const increaseBtns = document.querySelectorAll('.increase-btn');
-    const quantityInputs = document.querySelectorAll('.quantity-input');
-    
-    decreaseBtns.forEach((btn, index) => {
-        btn.addEventListener('click', function() {
-            let value = parseInt(quantityInputs[index].value);
-            if (value > 1) {
-                quantityInputs[index].value = value - 1;
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartPopup = document.getElementById('cartPopup');
+            const cartBackdrop = document.getElementById('cartBackdrop');
+            const closeCartBtn = document.getElementById('closeCart');
+            const orderNowBtns = document.querySelectorAll('.order-now-btn');
+            const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
+
+            // Function to open cart popup
+            function openCartPopup() {
+                cartPopup.classList.remove('invisible', 'opacity-0');
+                cartPopup.classList.add('opacity-100');
+                cartPopup.querySelector('.transform').classList.remove('translate-x-full');
+                document.body.classList.add('overflow-hidden');
             }
+
+            // Function to close cart popup
+            function closeCartPopup() {
+                cartPopup.classList.add('invisible', 'opacity-0');
+                cartPopup.classList.remove('opacity-100');
+                cartPopup.querySelector('.transform').classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            // Event listeners for opening cart
+            orderNowBtns.forEach(btn => {
+                btn.addEventListener('click', openCartPopup);
+            });
+
+            // Add to cart buttons
+            addToCartBtns.forEach(btn => {
+                btn.addEventListener('click', openCartPopup);
+            });
+
+            // Event listener for closing cart
+            if (closeCartBtn) {
+                closeCartBtn.addEventListener('click', closeCartPopup);
+            }
+
+            // Close cart when clicking on backdrop
+            if (cartBackdrop) {
+                cartBackdrop.addEventListener('click', closeCartPopup);
+            }
+
+            // Quantity buttons functionality
+            const decreaseBtns = document.querySelectorAll('.decrease-btn');
+            const increaseBtns = document.querySelectorAll('.increase-btn');
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+
+            decreaseBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function () {
+                    let value = parseInt(quantityInputs[index].value);
+                    if (value > 1) {
+                        quantityInputs[index].value = value - 1;
+                    }
+                });
+            });
+
+            increaseBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function () {
+                    let value = parseInt(quantityInputs[index].value);
+                    quantityInputs[index].value = value + 1;
+                });
+            });
         });
-    });
-    
-    increaseBtns.forEach((btn, index) => {
-        btn.addEventListener('click', function() {
-            let value = parseInt(quantityInputs[index].value);
-            quantityInputs[index].value = value + 1;
-        });
-    });
-});
     </script>
 </body>
+
 </html>

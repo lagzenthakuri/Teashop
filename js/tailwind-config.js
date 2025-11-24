@@ -2,15 +2,17 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                'primary-bg': '#FFFFFF',
-                'primary-text': '#1a1a1a',
-                'accent': '#5D4037', // Muted Earthy Reddish-Brown
-                'promo': '#4CAF50',  // Vibrant Green
-                'secondary': '#F5F5F5', // Light Gray
+                'primary-bg': '#E6F1EA',       // Soft but richer green background
+                'primary-text': '#1B3B2D',     // Dark Forest Green for text
+                'accent': '#6B8E23',           // Olive Green as accent
+                'promo': '#388E3C',            // Deep Vibrant Green for promotions
+                'secondary': '#CFE8D6',        // Subtle leafy green for secondary elements
             },
+
+
             fontFamily: {
                 'sans': ['Assistant', 'sans-serif'],
-                'heading': ['"Frank Ruhl Libre"', 'serif'],
+                'heading': ['"Frank Ruhl Libre"', 'sans-serif'],
             },
         }
     }

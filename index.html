@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeaFable - The Magical Tale Behind TeaFable's Brew</title>
+    <link rel="shortcut icon" href="./assets/tealogo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9b36e63a22.js" crossorigin="anonymous"></script>
     <script src="./js/tailwind-config.js"></script>
@@ -12,91 +13,50 @@
 
 <body class="bg-primary-bg font-sans text-primary-text">
     <!-- Header -->
-    <header class="bg-primary-bg text-primary-text py-6 px-4 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl md:text-4xl font-heading font-bold">
-                TEA<span class="text-accent">SHOP</span>
-            </h1>
+    <header class="bg-primary-bg text-primary-text py-4 px-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+        
+        <!-- Logo + Brand -->
+        <div class="flex items-center gap-3">
+            <img src="./assets/tealogo.png" alt="logo" class="h-14 w-auto">
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="./index.html" class="hover:text-accent transition">Home</a>
-
-                <!-- Our Teas Dropdown -->
-                <div class="relative group">
-                    <button class="hover:text-accent transition flex items-center gap-1">
-                        <a href="./collections.html"> Our Teas</a>
-                        <span>▼</span>
-                    </button>
-
-                    <!-- Dropdown Menu -->
-                    <div
-                        class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
-                        <ul class="py-2">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Chinese Tea</a>
-                            </li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Green Tea</a>
-                            </li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Black Tea</a>
-                            </li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Oolong Tea</a>
-                            </li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">White Tea</a>
-                            </li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Flower Tea</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a href="journey.html" class="hover:text-accent transition">Journey</a>
-                <a href="contact.html" class="hover:text-accent transition">Contact</a>
-
-                <!-- Currency Selector -->
-                <select class="border border-secondary px-2 py-1 rounded-md text-primary-text">
-                    <option value="usd">🇺🇸 USD</option>
-                    <option value="eur">🇪🇺 EUR</option>
-                    <option value="gbp">🇬🇧 GBP</option>
-                    <option value="cny">🇨🇳 CNY</option>
-                    <option value="inr">🇮🇳 INR</option>
-                    <option value="npr">🇳🇵 NPR</option>
-                </select>
-            </nav>
-
-            <!-- Right Buttons -->
-            <div class="flex space-x-3">
-                <button class="hover:text-accent transition">Join Us</button>
-                <button
-                    class="bg-accent border border-accent p-2 text-white rounded-lg hover:bg-opacity-90 transition order-now-btn">Order
-                    Now</button>
+            <div class="flex flex-col leading-tight">
+                <h1 class="text-2xl font-heading font-bold">
+                    Himalayan<span class="text-accent">Leaf</span>
+                </h1>
+                <p class="text-xs text-amber-600 font-bold tracking-wide">ILAM RESERVE</p>
+                <p class="text-[11px] text-amber-700 tracking-wide">GRAND CRU TEA FROM NEPAL</p>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
         </div>
 
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg mt-4 p-4">
-            <a href="./index.html" class="block py-2 hover:text-accent">Home</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8 items-center">
+            <a href="./index.html" class="hover:text-accent transition">Home</a>
 
-            <details class="py-2">
-                <summary class="cursor-pointer font-medium"> <a href="./collections.html">Our Teas</a></summary>
-                <ul class="pl-4 mt-2 space-y-1">
-                    <li><a href="#" class="block py-1 hover:text-accent">Chinese Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-accent">Green Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-accent">Black Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-accent">Oolong Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-accent">White Tea</a></li>
-                    <li><a href="#" class="block py-1 hover:text-accent">Flower Tea</a></li>
-                </ul>
-            </details>
+            <!-- Dropdown -->
+            <div class="relative group">
+                <button class="hover:text-accent transition flex items-center gap-1">
+                    <span class="flex justify-center">Our Teas</span>
+                </button>
 
-            <a href="journey.html" class="block py-2 hover:text-accent">Journey</a>
-            <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
+                <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible 
+                            group-hover:opacity-100 group-hover:visible transition duration-200">
+                    <ul class="py-2">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Chinese Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Green Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Black Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Oolong Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">White Tea</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-secondary text-primary-text">Flower Tea</a></li>
+                    </ul>
+                </div>
+            </div>
 
-            <!-- Mobile Currency Selector -->
-            <label class="block mt-2 text-sm font-medium">Country / Currency</label>
-            <select class="border border-secondary px-2 py-1 rounded-md text-primary-text">
+            <a href="journey.html" class="hover:text-accent transition">Journey</a>
+            <a href="contact.html" class="hover:text-accent transition">Contact</a>
+
+            <!-- Currency Selector -->
+            <select class="border border-secondary px-2 py-1 rounded-md text-primary-text bg-primary-bg">
                 <option value="usd">🇺🇸 USD</option>
                 <option value="eur">🇪🇺 EUR</option>
                 <option value="gbp">🇬🇧 GBP</option>
@@ -104,8 +64,58 @@
                 <option value="inr">🇮🇳 INR</option>
                 <option value="npr">🇳🇵 NPR</option>
             </select>
+        </nav>
+
+        <!-- Right Buttons -->
+        <div class="hidden md:flex space-x-3">
+            <button class="hover:text-accent transition">Join Us</button>
+            <button class="bg-accent border border-accent px-4 py-2 text-white rounded-lg hover:bg-opacity-90 transition">
+                Order Now
+            </button>
         </div>
-    </header>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-3xl" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg mt-4 p-4 rounded-lg">
+        <a href="./index.html" class="block py-2 hover:text-accent">Home</a>
+
+        <details class="py-2">
+            <summary class="cursor-pointer font-medium">Our Teas</summary>
+            <ul class="pl-4 mt-2 space-y-1">
+                <li><a href="#" class="block py-1 hover:text-accent">Chinese Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-accent">Green Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-accent">Black Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-accent">Oolong Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-accent">White Tea</a></li>
+                <li><a href="#" class="block py-1 hover:text-accent">Flower Tea</a></li>
+            </ul>
+        </details>
+
+        <a href="journey.html" class="block py-2 hover:text-accent">Journey</a>
+        <a href="contact.html" class="block py-2 hover:text-accent">Contact</a>
+
+        <label class="block mt-3 text-sm font-medium">Country / Currency</label>
+        <select class="border border-secondary px-2 py-1 rounded-md text-primary-text bg-primary-bg w-full mt-1">
+            <option value="usd">🇺🇸 USD</option>
+            <option value="eur">🇪🇺 EUR</option>
+            <option value="gbp">🇬🇧 GBP</option>
+            <option value="cny">🇨🇳 CNY</option>
+            <option value="inr">🇮🇳 INR</option>
+            <option value="npr">🇳🇵 NPR</option>
+        </select>
+
+        <div class="mt-4 space-y-2">
+            <button class="w-full hover:text-accent transition">Join Us</button>
+            <button class="w-full bg-accent border border-accent py-2 text-white rounded-lg hover:bg-opacity-90 transition">
+                Order Now
+            </button>
+        </div>
+    </div>
+</header>
+
 
     <!-- Cart Popup -->
     <div class="fixed inset-0 z-50 flex justify-end opacity-0 invisible transition-opacity duration-300" id="cartPopup">
